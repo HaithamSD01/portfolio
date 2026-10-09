@@ -328,6 +328,8 @@ def build(make_og=False):
     write(OUT / "sitemap.xml", sitemap(site))
     write(OUT / "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {site['base_url']}/sitemap.xml\n")
     write(OUT / "_headers", headers(script_hash))
+    # Lu par Netlify aussi en dépôt manuel (glisser-déposer), contrairement à netlify.toml.
+    write(OUT / "_redirects", "/fr/*  /:splat  301\n")
     write(OUT / "site.webmanifest", json.dumps({
         "name": site["name"], "short_name": "H. Dhaimi", "start_url": "/", "display": "browser",
         "background_color": SAND, "theme_color": SAND,

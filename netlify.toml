@@ -1,10 +1,5 @@
 # Le site est déjà généré dans public/ : Netlify publie ce dossier tel quel.
+# Les redirections et en-têtes sont dans public/_redirects et public/_headers.
 [build]
   publish = "public"
   command = ""
-
-# Si quelqu'un tape /fr/, il arrive sur la version française (la racine).
-[[redirects]]
-  from = "/fr/*"
-  to = "/:splat"
-  status = 301
