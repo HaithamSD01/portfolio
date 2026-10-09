@@ -1,0 +1,455 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "path": "/en/",
+  "locale": "en_US",
+  "meta": {
+    "title": "Haitham Dhaimi — Engineering student in AI and digital health",
+    "description": "Haitham Dhaimi, engineering student at SUPTECH-SANTÉ (Mohammedia, Morocco). A multi-agent AI system shipped to production on Azure, and a pharmaceutical quality-control internship at Promopharm (Hikma group). Projects, CV and contact.",
+    "og_title": "Haitham Dhaimi — AI and digital health",
+    "og_description": "Engineering student at SUPTECH-SANTÉ. A multi-agent system shipped to production on Azure, one month in a pharmaceutical quality-control lab.",
+    "job_title": "Engineering student in digital engineering and AI for healthcare"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "nav_label": "Main navigation",
+    "nav": {
+      "xp": "Experience",
+      "proj": "Projects",
+      "skills": "Skills",
+      "path": "Background",
+      "contact": "Contact"
+    },
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "theme_label": "Colour theme",
+    "theme_auto": "Auto",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "lang_label": "Language",
+    "cv_main": "Download my CV (PDF)",
+    "cv_other": "CV en français",
+    "see_work": "See the case studies",
+    "copy_email": "Copy address",
+    "copied": "Address copied.",
+    "copy_fail": "Couldn't copy, the address is shown next to it.",
+    "suggest_dismiss": "Close",
+    "details_more": "Read the full case study",
+    "updated": "Last updated: 9 October 2026",
+    "source": "Site source code",
+    "back_top": "Back to top",
+    "new_tab": "(opens in a new tab)",
+    "problem_label": "The problem",
+    "role_label": "My role",
+    "results_label": "Results",
+    "stack_label": "Tools",
+    "metrics_label": "In numbers",
+    "theme_auto_long": "Automatic theme (follows your system)",
+    "theme_light_long": "Light theme",
+    "theme_dark_long": "Dark theme",
+    "home": "Home"
+  },
+  "hero": {
+    "kicker": "Digital engineering & AI for healthcare",
+    "lead": "I study digital engineering and AI applied to healthcare at <strong>SUPTECH-SANTÉ</strong> (Mohammedia, Morocco). This summer I shipped a <strong>multi-agent system to production on Azure</strong>, and spent a month in a <strong>pharmaceutical quality-control lab</strong>. What I care about: building digital tools that a regulated healthcare environment can actually adopt.",
+    "availability": "Open to internships and projects in digital health, AI and cloud."
+  },
+  "metrics": [
+    {
+      "value": "18/18",
+      "label": "specification tasks delivered (Smartovate)"
+    },
+    {
+      "value": "269/269",
+      "label": "lines covered by tests, i.e. 100% (pytest-cov)"
+    },
+    {
+      "value": "47.3 s",
+      "label": "median production latency, against a 60 s threshold"
+    },
+    {
+      "value": "64 pp.",
+      "label": "internship report written as an audit (Promopharm)"
+    }
+  ],
+  "xp": {
+    "title": "Two internships, two worlds",
+    "intro": "Summer 2026: a development project taken solo all the way to production, and an immersion in a GMP-regulated pharmaceutical lab. Every number below is defined and can be checked."
+  },
+  "cases": [
+    {
+      "id": "smartovate",
+      "org": "Smartovate Ltd",
+      "place": "London, United Kingdom (remote)",
+      "role": "Intern, AI & cloud engineering",
+      "dates": "1 July – 31 August 2026",
+      "title": "A multi-agent system, from specification to production",
+      "problem": "A single language model that produces and checks its own work lets its own mistakes through. Smartovate wanted a system where several agents split the work and check each other, deployed for real rather than left in a notebook.",
+      "my_role": "Solo on the project, supervised by Dr. Abdelkhalek Bakkari (CEO). The specification came from the company: 18 tasks over four two-week sprints. Architecture, code, tests, security and deployment were mine.",
+      "results": [
+        "<b>18 out of 18</b> specification tasks delivered. Every closed ticket in Jira carries its technical evidence (log, screenshot, commit).",
+        "<b>100% line coverage</b>: 269 of 269 statements, 63 tests, measured with pytest-cov across the five application packages. I started from 38%; the contractual target was 80%.",
+        "<b>47.3 s median latency in production</b> over five reference tasks (required threshold: 60 s). 15 successful runs out of 15, across three campaigns.",
+        "<b>4 sprints out of 4</b> closed early, up to 11 days ahead of the deadline."
+      ],
+      "stack": [
+        "Python",
+        "Microsoft AutoGen 0.4",
+        "Azure OpenAI GPT-4o",
+        "FastAPI",
+        "Docker",
+        "Azure Container Apps",
+        "Cosmos DB",
+        "Managed Redis",
+        "pytest",
+        "Jira"
+      ],
+      "approach_title": "How it is built",
+      "approach": [
+        "A four-agent <b>hub-and-spoke</b> topology: an Orchestrator that breaks the request down, a Coder that produces, a Reviewer that reads it over, and a Critic that validates and filters personal data.",
+        "The next speaker is picked dynamically (<code>SelectorGroupChat</code>). Two stop conditions prevent infinite loops: the <code>TERMINATE</code> keyword and a 15-message cap.",
+        "A FastAPI API protected by an API key, session memory on Azure Managed Redis and an audit log on Cosmos DB, all in a Docker container on Azure Container Apps. The 11 secrets go through <code>secretRef</code>; none is stored in plain text.",
+        "The coverage scope is pinned in a versioned <code>.coveragerc</code>: the Streamlit interface and the manual connection script are excluded, and anyone can reproduce the number by cloning the repository."
+      ],
+      "diagram": true,
+      "failed_title": "What went wrong, and what I did about it",
+      "failed": [
+        "I exposed my API key twice: once in a terminal, once in a screenshot. Rotated immediately both times. Since then, the <code>.env</code> tab gets closed before any screenshot.",
+        "Microsoft retired Azure Cache for Redis in the middle of sprint 3. Because memory sat behind an abstraction (dependency inversion), moving to Azure Managed Redis only took an environment variable change, with no change to application code.",
+        "A fake bug cost me 40 minutes: the error message came from a server started two hours earlier and never restarted. Lesson kept: check what the program actually reads, not what I think I wrote.",
+        "Four gaps with the specification are owned and justified in the report: no human-in-the-loop agent, only the Group Chat pattern implemented, no explicit 8,000-token context truncation, and LangChain and Azure Functions left out.",
+        "Code execution still runs in demo mode: the planned Docker isolation is impossible on Azure Container Apps (no Docker-in-Docker). I documented the constraint before it turned into an incident; the fix I identified, Azure Container Apps Dynamic Sessions, is not integrated yet."
+      ],
+      "proof_title": "Evidence",
+      "proofs": [
+        {
+          "label": "Source code on GitHub",
+          "href": "https://github.com/HaithamSD01/smartovate-multiagent"
+        },
+        {
+          "label": "Internship report (45 pp., in French)",
+          "note": "confidential, can be walked through in an interview"
+        }
+      ]
+    },
+    {
+      "id": "promopharm",
+      "org": "Promopharm S.A. (Hikma Pharmaceuticals group)",
+      "place": "Had Soualem, Morocco",
+      "role": "Intern, physico-chemical quality control",
+      "dates": "13 July – 13 August 2026",
+      "title": "One month in a pharmaceutical quality-control lab",
+      "problem": "You can't judge a medicine by looking at it. I wanted to see from the inside how a lab turns a measurement into a compliance decision, and what it takes for that decision to still hold up in front of an inspector years after the batch was made.",
+      "my_role": "First-year engineering immersion internship, supervised by Mr. Hicham Touil, lab supervisor. I rotated across raw materials, finished products, stability and chromatography: watching first, then practising under supervision.",
+      "results": [
+        "<b>One analysis followed end to end</b>: an HPLC assay with degradation-product testing, from weighing to the signed line in the logbook, through system suitability and the calculation.",
+        "<b>An appearance non-conformity spotted</b> during a visual check (foreign particles in an ointment). The only out-of-spec result I saw during the internship, and it came from an eye, not an instrument.",
+        "<b>A 64-page report</b> written as an audit: the medicine's journey through the site, the quality framework, a case study, observations and improvement ideas.",
+        "<b>A proposal</b> submitted to the lab's improvement-ideas scheme: a digital twin of the lab and a calculation assistant to check dilutions. A proposal, not something built."
+      ],
+      "stack": [
+        "HPLC",
+        "GC",
+        "TLC",
+        "UV-Vis",
+        "Karl Fischer",
+        "Dissolution",
+        "GMP",
+        "ICH Q1A(R2)",
+        "ALCOA+",
+        "Empower"
+      ],
+      "approach_title": "What I practised",
+      "approach": [
+        "The lab's techniques: liquid (HPLC) and gas (GC) chromatography, thin-layer chromatography, UV-Visible spectrophotometry, Karl Fischer titration, dissolution and disintegration, pH and conductivity measurement.",
+        "The framework that gives measurements their value: Good Manufacturing Practice, European Pharmacopoeia, ICH Q1A(R2) for stability, ALCOA+ data integrity, out-of-specification and out-of-trend handling (OOS/OOT).",
+        "Beyond the lab: a visit to production (controlled-atmosphere areas, pressure cascade, packaging) and time in microbiology."
+      ],
+      "diagram": false,
+      "failed_title": "What I had to correct along the way",
+      "failed": [
+        "Several of my first notes were wrong. I thought a LIMS was in use; the lab manager confirmed it wasn't. I also mixed up stability studies with batch release.",
+        "Each mistake was fixed the same way: checking my notes against a document, or asking the right person. That is probably what I keep most from this internship.",
+        "What I take from it for my own field: in a regulated environment, value doesn't come from the algorithm first, but from the quality and availability of the data it is fed."
+      ],
+      "proof_title": "Evidence",
+      "proofs": [
+        {
+          "label": "Internship report (64 pp., in French)",
+          "note": "internal document, not published; no batch data or internal procedure appears here"
+        },
+        {
+          "label": "Internship certificate",
+          "note": "available on request"
+        }
+      ]
+    }
+  ],
+  "overlap": "<b>Why the dates overlap.</b> The industrial internship was confirmed late, in early July. By then I had already arranged the remote internship at Smartovate myself. I chose to do both: the lab on site, the development outside those hours. The first two weeks were hard to organise, then I found a rhythm, and both deliverables were seen through.",
+  "diagram": {
+    "title": "Hub-and-spoke topology of the multi-agent system",
+    "desc": "An authenticated REST API passes the request to the Orchestrator, which coordinates the Coder, the Reviewer and the Critic before consolidating the answer.",
+    "api": "REST API",
+    "api_r": "FastAPI, API key",
+    "hub": "Orchestrator",
+    "hub_r": "breaks the request down",
+    "a1": "Coder",
+    "a1_r": "produces",
+    "a2": "Reviewer",
+    "a2_r": "reviews",
+    "a3": "Critic",
+    "a3_r": "validates, filters personal data",
+    "mem": "Redis (session) · Cosmos DB (audit)",
+    "cap": "Stops on the TERMINATE keyword or after 15 messages"
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Shorter projects, done in class, in competition or on my own.",
+    "items": [
+      {
+        "tag": "Public health, web tool",
+        "title": "Rabies: act fast",
+        "date": "September 2026",
+        "text": "An awareness tool in Arabic, Moroccan Darija and French for someone who has just been bitten or scratched by an animal: first aid, a two-question risk check, vaccination centres in Casablanca, Mohammedia and the surrounding region with the source of each address, and a dose-date calculator. It informs; it does not replace a doctor.",
+        "href": "https://github.com/HaithamSD01/rabies-alert",
+        "link": "Code on GitHub"
+      },
+      {
+        "tag": "3rd prize, e-Government category",
+        "title": "RallyIA Future Lab Hackathon",
+        "date": "Merzouga, 2026",
+        "text": "Designed and pitched a digital-governance solution against other engineering student teams."
+      },
+      {
+        "tag": "Personal prototype",
+        "title": "Suite CQ: a simulated quality-control lab",
+        "date": "2026",
+        "text": "A prototype that simulates a QMS/LIMS for a physico-chemical control lab, following on from my digitalisation proposal at Promopharm."
+      },
+      {
+        "tag": "Machine learning",
+        "title": "Diabetes prediction",
+        "date": "Academic project",
+        "text": "Supervised model in Python covering the whole pipeline: data cleaning and preparation, feature selection, training and evaluation."
+      },
+      {
+        "tag": "IoT, embedded systems",
+        "title": "Vital-signs wristband",
+        "date": "2024 – 2025",
+        "text": "Hardware and embedded software prototype (Arduino, C++) that continuously measures heart rate, blood pressure and body temperature."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "intro": "Grouped by where I actually used them, instead of progress bars.",
+    "groups": [
+      {
+        "title": "Used in production",
+        "note": "Smartovate internship",
+        "items": [
+          "Python",
+          "FastAPI",
+          "Microsoft AutoGen",
+          "Azure OpenAI (GPT-4o)",
+          "Azure Container Apps",
+          "Container Registry",
+          "Cosmos DB",
+          "Managed Redis",
+          "Log Analytics",
+          "Docker",
+          "pytest / pytest-cov",
+          "Git / GitHub",
+          "Jira, Agile"
+        ]
+      },
+      {
+        "title": "Practised in the lab",
+        "note": "Promopharm internship",
+        "items": [
+          "HPLC",
+          "GC",
+          "TLC",
+          "UV-Vis spectrophotometry",
+          "Karl Fischer",
+          "Dissolution",
+          "GMP",
+          "European Pharmacopoeia",
+          "ICH Q1A(R2)",
+          "ALCOA+",
+          "OOS / OOT"
+        ]
+      },
+      {
+        "title": "Projects and coursework",
+        "note": "SUPTECH-SANTÉ",
+        "items": [
+          "C",
+          "C++",
+          "SQL",
+          "Machine learning",
+          "MATLAB",
+          "Arduino",
+          "SolidWorks",
+          "Streamlit"
+        ]
+      }
+    ],
+    "languages_title": "Languages",
+    "languages": [
+      {
+        "name": "Arabic",
+        "level": "native"
+      },
+      {
+        "name": "French",
+        "level": "fluent"
+      },
+      {
+        "name": "English",
+        "level": "fluent"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "school": "SUPTECH-SANTÉ, Université Internationale Bleue — Mohammedia",
+        "dates": "2025 – 2028",
+        "title": "Engineering degree, digital engineering & AI in healthcare",
+        "text": "Currently in 2nd year. Databases, signal processing, medical imaging, physiology, object-oriented programming, health-data law."
+      },
+      {
+        "school": "SUPTECH-SANTÉ — Mohammedia",
+        "dates": "2023 – 2025",
+        "title": "Integrated preparatory classes",
+        "text": "Mathematics, physics and engineering sciences."
+      },
+      {
+        "school": "Lycée Alexandre — Casablanca",
+        "dates": "2022 – 2023",
+        "title": "Baccalaureate in physical sciences and chemistry",
+        "text": "Highest honours."
+      }
+    ]
+  },
+  "trainings": {
+    "title": "Training completed",
+    "intro": "Training courses, not certifications: when I pass an official exam, it will appear here with its verification link.",
+    "exam_note": "official exam not taken",
+    "items": [
+      {
+        "title": "CompTIA Security+ (SY0-701) preparation",
+        "org": "Smartovate Ltd / Subul",
+        "date": "August 2026",
+        "exam": true
+      },
+      {
+        "title": "AWS AI Practitioner (AIF-C01) preparation",
+        "org": "Smartovate Ltd / Subul",
+        "date": "August 2026",
+        "exam": true
+      },
+      {
+        "title": "Seeds for the Future — training programme (5G, cloud, AI)",
+        "org": "Huawei, Dongguan & Shenzhen, China",
+        "date": "August 2025"
+      },
+      {
+        "title": "What Is Generative AI?",
+        "org": "LinkedIn Learning",
+        "date": "July 2025"
+      },
+      {
+        "title": "AI for Beginners, Effective Presentations, Business Email",
+        "org": "HP LIFE / HP Foundation",
+        "date": "2025"
+      },
+      {
+        "title": "AI Basics: Overview of AI",
+        "org": "Huawei Talent Online",
+        "date": "February 2024"
+      }
+    ]
+  },
+  "involvement": {
+    "title": "Involvement",
+    "items": [
+      {
+        "org": "AIESEC Mohammedia",
+        "dates": "Sep 2025 – Jan 2026",
+        "title": "Member, then Vice President Outgoing Global Talent",
+        "text": "First guiding young people towards internships abroad, then as VP: talent acquisition and a six-month exchange pipeline."
+      },
+      {
+        "org": "Apex Digital — UIB",
+        "dates": "2026",
+        "title": "Founding member, president then treasurer",
+        "text": "The university's student digital and AI community: direction, forecast budget, expense tracking and partner relations."
+      },
+      {
+        "org": "Association des Amis de Hay Hassani",
+        "dates": "2024 – 2026",
+        "title": "Volunteer, Casablanca International 10 km race",
+        "text": "Logistics across several editions, including the 13th (February 2024) and 14th (February 2025), for children's and adults' races."
+      },
+      {
+        "org": "SUPTECH-SANTÉ",
+        "dates": "2024 – 2026",
+        "title": "Events and chess tournaments",
+        "text": "Co-organised school events and inter-class tournaments. 2nd place in 2024, 3rd in 2025."
+      },
+      {
+        "org": "Digital Upskilling MENA AI Forum",
+        "dates": "September 2026",
+        "title": "Participant, Rabat",
+        "text": "Forum run by StartUp Maroc with Village Capital and the Moody's Foundation."
+      }
+    ]
+  },
+  "about": {
+    "title": "How I work",
+    "paras": [
+      "I come from two interests at once: technology and health. What drives me is the moment a digital tool goes from prototype to something a team actually uses, with all its security, traceability and regulatory constraints.",
+      "The pattern on this site comes from zellige: the eight-pointed star is born from two overlapping squares. Simple rules that, combined, give a rich structure. That is also how I see a good system, whether it is made of AI agents or lab procedures."
+    ],
+    "principles_title": "Three rules I keep",
+    "principles": [
+      {
+        "title": "Check what the program actually reads",
+        "text": "Not what I think I wrote. Half of my bugs came from there."
+      },
+      {
+        "title": "Write down what didn't work",
+        "text": "My Smartovate report has a whole section on gaps. It costs some ego and earns credibility."
+      },
+      {
+        "title": "Data must be traceable",
+        "text": "A lesson from the lab: a result is only worth something if you can find out who produced it, when, and with which instrument."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Email or LinkedIn is the easiest. I reply in English, French or Arabic.",
+    "email_label": "Email",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub",
+    "location_label": "Based in",
+    "location": "Casablanca, Morocco",
+    "qr_label": "Scan to open this site",
+    "qr_alt": "QR code linking to Haitham Dhaimi's portfolio"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "text": "This address doesn't exist, or no longer does.",
+    "back": "Back to home"
+  },
+  "suggest": {
+    "target": "fr",
+    "text": "Cette page existe aussi en français.",
+    "link": "Lire en français",
+    "href": "/"
+  }
+}

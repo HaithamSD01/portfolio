@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="{{ c.lang }}" dir="{{ c.dir }}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>{{ theme_script }}</script>
+<title>{{ c.meta.title }}</title>
+<meta name="description" content="{{ c.meta.description }}">
+<meta name="author" content="{{ site.name }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F0E4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B121F" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="{{ page_url }}">
+{% for l in site.languages %}<link rel="alternate" hreflang="{{ l.code }}" href="{{ site.base_url }}{{ l.path }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ site.base_url }}/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ c.meta.og_title }}">
+<meta property="og:description" content="{{ c.meta.og_description }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:locale" content="{{ c.locale }}">
+{% for loc in other_locales %}<meta property="og:locale:alternate" content="{{ loc }}">
+{% endfor %}<meta property="og:image" content="{{ site.base_url }}/assets/og-{{ c.lang }}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ c.meta.og_title }}">
+<meta property="profile:first_name" content="Haitham">
+<meta property="profile:last_name" content="Dhaimi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ c.meta.og_title }}">
+<meta name="twitter:description" content="{{ c.meta.og_description }}">
+<meta name="twitter:image" content="{{ site.base_url }}/assets/og-{{ c.lang }}.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/{{ preload_font }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v={{ css_v }}">
+<script type="application/ld+json">{{ jsonld }}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">{{ c.ui.skip }}</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="{{ c.path }}" aria-label="{{ site.name }}, {{ c.ui.home }}">
+      <svg class="brand-star" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></svg>
+      <span>Haitham Dhaimi</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-open="{{ c.ui.menu_open }}" data-close="{{ c.ui.menu_close }}">
+      <span class="sr-only">{{ c.ui.menu_open }}</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+
+    <div class="site-menu" id="site-menu">
+      <nav aria-label="{{ c.ui.nav_label }}">
+        <ul class="nav-links">
+          <li><a href="#experience">{{ c.ui.nav.xp }}</a></li>
+          <li><a href="#projects">{{ c.ui.nav.proj }}</a></li>
+          <li><a href="#skills">{{ c.ui.nav.skills }}</a></li>
+          <li><a href="#background">{{ c.ui.nav.path }}</a></li>
+          <li><a href="#contact">{{ c.ui.nav.contact }}</a></li>
+        </ul>
+      </nav>
+      <div class="theme-switch" role="group" aria-label="{{ c.ui.theme_label }}">
+        <button type="button" data-theme-choice="auto" aria-pressed="true" title="{{ c.ui.theme_auto_long }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" class="fill"/></svg>
+          <span class="sr-only">{{ c.ui.theme_auto_long }}</span><span class="theme-txt" aria-hidden="true">{{ c.ui.theme_auto }}</span>
+        </button>
+        <button type="button" data-theme-choice="light" aria-pressed="false" title="{{ c.ui.theme_light_long }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+          <span class="sr-only">{{ c.ui.theme_light_long }}</span><span class="theme-txt" aria-hidden="true">{{ c.ui.theme_light }}</span>
+        </button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false" title="{{ c.ui.theme_dark_long }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+          <span class="sr-only">{{ c.ui.theme_dark_long }}</span><span class="theme-txt" aria-hidden="true">{{ c.ui.theme_dark }}</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="lang-switch" aria-label="{{ c.ui.lang_label }}">
+      {% for l in site.languages %}{% if l.code == c.lang %}<span class="lang-current" lang="{{ l.code }}" aria-current="page"><abbr title="{{ l.label }}">{{ l.short }}</abbr></span>{% else %}<a href="{{ l.path }}" hreflang="{{ l.code }}" lang="{{ l.code }}" data-lang="{{ l.code }}" title="{{ l.label }}"><span class="sr-only">{{ l.label }}</span><span aria-hidden="true">{{ l.short }}</span></a>{% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+{% if c.suggest %}
+<div class="lang-suggest" data-suggest="{{ c.suggest.target }}" lang="{{ c.suggest.target }}" hidden>
+  <div class="wrap lang-suggest-row">
+    <p>{{ c.suggest.text }} <a href="{{ c.suggest.href }}" hreflang="{{ c.suggest.target }}" data-lang="{{ c.suggest.target }}">{{ c.suggest.link }}</a></p>
+    <button type="button" class="lang-suggest-close" lang="{{ c.lang }}">{{ c.ui.suggest_dismiss }}</button>
+  </div>
+</div>
+{% endif %}
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-name">
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="hero-kicker">{{ c.hero.kicker }}</p>
+      <h1 id="hero-name" class="hero-name" lang="en"><span>Haitham</span> <span class="hero-last">Dhaimi</span></h1>
+      <p class="hero-lead">{{ c.hero.lead | safe }}</p>
+      <p class="hero-avail"><span class="dot" aria-hidden="true"></span>{{ c.hero.availability }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ cv_main }}" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19.5h16"/></svg>
+          {{ c.ui.cv_main }}
+        </a>
+        <a class="btn btn-ghost" href="#experience">{{ c.ui.see_work }}</a>
+      </div>
+      <p class="hero-links">
+        <a href="{{ cv_other }}" download hreflang="{{ cv_other_lang }}">{{ c.ui.cv_other }}</a>
+        <a href="{{ site.linkedin }}" rel="me noopener" target="_blank">LinkedIn<span class="sr-only"> {{ c.ui.new_tab }}</span></a>
+        <a href="{{ site.github }}" rel="me noopener" target="_blank">GitHub<span class="sr-only"> {{ c.ui.new_tab }}</span></a>
+      </p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" focusable="false">
+        <circle class="ring" cx="200" cy="200" r="182"/>
+        <circle class="ring ring-dash" cx="200" cy="200" r="168"/>
+        <rect class="sq sq-a" x="95" y="95" width="210" height="210"/>
+        <rect class="sq sq-b" x="95" y="95" width="210" height="210" transform="rotate(45 200 200)"/>
+        <rect class="sq sq-in" x="140" y="140" width="120" height="120" transform="rotate(22.5 200 200)"/>
+        <rect class="sq sq-in" x="140" y="140" width="120" height="120" transform="rotate(67.5 200 200)"/>
+        <circle class="core" cx="200" cy="200" r="78"/>
+        <path class="pulse" d="M126 200h34l11-28 15 60 15-92 15 108 12-48h46"/>
+        {% for p in star_points %}<circle class="node" cx="{{ p[0] }}" cy="{{ p[1] }}" r="4.5"/>{% endfor %}
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="metrics" aria-labelledby="metrics-title">
+  <h2 id="metrics-title" class="sr-only">{{ c.ui.metrics_label }}</h2>
+  <div class="wrap">
+    <ul class="metrics-list">
+      {% for m in c.metrics %}<li><span class="metric-value">{{ m.value }}</span><span class="metric-label">{{ m.label }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="experience" aria-labelledby="xp-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="xp-title">{{ c.xp.title }}</h2>
+      <p>{{ c.xp.intro }}</p>
+    </header>
+
+    {% for case in c.cases %}
+    <article class="case" id="{{ case.id }}" aria-labelledby="{{ case.id }}-title">
+      <div class="case-meta">
+        <p class="case-org">{{ case.org }}</p>
+        <p class="case-sub"><span>{{ case.role }}</span><span>{{ case.place }}</span><span>{{ case.dates | safe }}</span></p>
+      </div>
+      <h3 id="{{ case.id }}-title" class="case-title">{{ case.title }}</h3>
+      <div class="case-grid">
+        <div class="case-context">
+          <h4>{{ c.ui.problem_label }}</h4>
+          <p>{{ case.problem }}</p>
+          <h4>{{ c.ui.role_label }}</h4>
+          <p>{{ case.my_role }}</p>
+        </div>
+        <div class="case-results">
+          <h4>{{ c.ui.results_label }}</h4>
+          <ul class="star-list">
+            {% for r in case.results %}<li>{{ r | safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <ul class="chips" aria-label="{{ c.ui.stack_label }}">
+        {% for s in case.stack %}<li lang="en">{{ s }}</li>{% endfor %}
+      </ul>
+      <details class="case-more">
+        <summary>{{ c.ui.details_more }}</summary>
+        <div class="case-more-body">
+          <h4>{{ case.approach_title }}</h4>
+          <ul class="star-list">
+            {% for a in case.approach %}<li>{{ a | safe }}</li>
+            {% endfor %}
+          </ul>
+          {% if case.diagram %}
+          <figure class="diagram">
+            <svg viewBox="0 0 640 440" role="img" aria-labelledby="dg-title dg-desc" focusable="false">
+              <title id="dg-title">{{ c.diagram.title }}</title>
+              <desc id="dg-desc">{{ c.diagram.desc }}</desc>
+              <g class="dg-links">
+                <line x1="320" y1="96" x2="320" y2="148"/>
+                <line x1="270" y1="232" x2="120" y2="320"/>
+                <line x1="370" y1="232" x2="520" y2="320"/>
+                <line x1="320" y1="262" x2="320" y2="340"/>
+                <line class="dashed" x1="393" y1="200" x2="424" y2="200"/>
+                <path class="dashed" d="M120 370 C 120 428, 520 428, 520 370"/>
+              </g>
+              <g class="dg-box"><rect x="220" y="40" width="200" height="56" rx="10"/><text x="320" y="64" class="dg-label">{{ c.diagram.api }}</text><text x="320" y="83" class="dg-role">{{ c.diagram.api_r }}</text></g>
+              <g class="dg-hub">
+                <rect x="268" y="148" width="104" height="104"/><rect x="268" y="148" width="104" height="104" transform="rotate(45 320 200)"/>
+                <circle cx="320" cy="200" r="48"/>
+                <text x="320" y="197" class="dg-label">{{ c.diagram.hub }}</text><text x="320" y="214" class="dg-role">{{ c.diagram.hub_r }}</text>
+              </g>
+              <g class="dg-box dg-mem"><rect x="424" y="176" width="210" height="48" rx="10"/><text x="529" y="204" class="dg-role">{{ c.diagram.mem }}</text></g>
+              <g class="dg-box"><rect x="40" y="320" width="160" height="50" rx="10"/><text x="120" y="342" class="dg-label">{{ c.diagram.a1 }}</text><text x="120" y="360" class="dg-role">{{ c.diagram.a1_r }}</text></g>
+              <g class="dg-box"><rect x="440" y="320" width="160" height="50" rx="10"/><text x="520" y="342" class="dg-label">{{ c.diagram.a2 }}</text><text x="520" y="360" class="dg-role">{{ c.diagram.a2_r }}</text></g>
+              <g class="dg-box dg-critic"><rect x="220" y="340" width="200" height="50" rx="10"/><text x="320" y="362" class="dg-label">{{ c.diagram.a3 }}</text><text x="320" y="380" class="dg-role">{{ c.diagram.a3_r }}</text></g>
+            </svg>
+            <figcaption>{{ c.diagram.cap }}</figcaption>
+          </figure>
+          {% endif %}
+          <h4>{{ case.failed_title }}</h4>
+          <ul class="star-list star-list-warn">
+            {% for f in case.failed %}<li>{{ f | safe }}</li>
+            {% endfor %}
+          </ul>
+          <h4>{{ case.proof_title }}</h4>
+          <ul class="proofs">
+            {% for p in case.proofs %}<li>{% if p.href is defined %}<a href="{{ p.href }}" rel="noopener" target="_blank">{{ p.label }}<span class="sr-only"> {{ c.ui.new_tab }}</span></a>{% else %}<span class="proof-label">{{ p.label }}</span>{% endif %}{% if p.note is defined %} <span class="proof-note">{{ p.note }}</span>{% endif %}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </details>
+    </article>
+    {% endfor %}
+
+    <p class="overlap">{{ c.overlap | safe }}</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="projects" aria-labelledby="proj-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="proj-title">{{ c.projects.title }}</h2>
+      <p>{{ c.projects.intro }}</p>
+    </header>
+    <ul class="card-grid">
+      {% for p in c.projects['items'] %}
+      <li class="card">
+        <p class="card-tag">{{ p.tag | safe }}</p>
+        <h3>{{ p.title }}</h3>
+        <p class="card-date">{{ p.date }}</p>
+        <p>{{ p.text }}</p>
+        {% if p.href is defined %}<p class="card-link"><a href="{{ p.href }}" rel="noopener" target="_blank">{{ p.link }}<span class="sr-only"> {{ c.ui.new_tab }}</span></a></p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="skills-title">{{ c.skills.title }}</h2>
+      <p>{{ c.skills.intro }}</p>
+    </header>
+    <div class="skill-grid">
+      {% for g in c.skills.groups %}
+      <div class="skill-group">
+        <h3>{{ g.title }} <span class="skill-note">{{ g.note }}</span></h3>
+        <ul class="chips">{% for s in g['items'] %}<li>{{ s }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+      <div class="skill-group">
+        <h3>{{ c.skills.languages_title }}</h3>
+        <ul class="lang-list">{% for l in c.skills.languages %}<li><b>{{ l.name }}</b> <span>{{ l.level }}</span></li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="background" aria-labelledby="edu-title">
+  <div class="wrap bg-grid">
+    <div>
+      <header class="section-head">
+        <h2 id="edu-title">{{ c.education.title }}</h2>
+      </header>
+      <ol class="timeline">
+        {% for e in c.education['items'] %}
+        <li>
+          <p class="tl-meta"><span>{{ e.school }}</span><span>{{ e.dates }}</span></p>
+          <h3>{{ e.title }}</h3>
+          <p>{{ e.text | safe }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div>
+      <header class="section-head">
+        <h2 id="train-title">{{ c.trainings.title }}</h2>
+        <p>{{ c.trainings.intro }}</p>
+      </header>
+      <ul class="trainings">
+        {% for t in c.trainings['items'] %}
+        <li>
+          <h3>{{ t.title }}</h3>
+          <p><span>{{ t.org }}</span><span>{{ t.date }}</span></p>
+          {% if t.exam is defined and t.exam %}<p class="exam-badge">{{ c.trainings.exam_note }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="involvement" aria-labelledby="inv-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="inv-title">{{ c.involvement.title }}</h2>
+    </header>
+    <ul class="card-grid card-grid-plain">
+      {% for i in c.involvement['items'] %}
+      <li class="card">
+        <p class="tl-meta"><span>{{ i.org }}</span><span>{{ i.dates }}</span></p>
+        <h3>{{ i.title }}</h3>
+        <p>{{ i.text | safe }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div>
+      <header class="section-head">
+        <h2 id="about-title">{{ c.about.title }}</h2>
+      </header>
+      {% for p in c.about.paras %}<p class="about-p">{{ p }}</p>
+      {% endfor %}
+    </div>
+    <div class="principles">
+      <h3>{{ c.about.principles_title }}</h3>
+      <ul>
+        {% for p in c.about.principles %}<li><b>{{ p.title }}</b><span>{{ p.text }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <header class="section-head">
+        <h2 id="contact-title">{{ c.contact.title }}</h2>
+        <p>{{ c.contact.text }}</p>
+      </header>
+      <dl class="contact-list">
+        <div><dt>{{ c.contact.email_label }}</dt><dd><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a> <button type="button" class="copy-btn" data-copy="{{ site.email }}" data-ok="{{ c.ui.copied }}" data-fail="{{ c.ui.copy_fail }}" hidden>{{ c.ui.copy_email }}</button></dd></div>
+        <div><dt>{{ c.contact.linkedin_label }}</dt><dd><a href="{{ site.linkedin }}" rel="me noopener" target="_blank" dir="ltr">{{ site.linkedin_short }}<span class="sr-only"> {{ c.ui.new_tab }}</span></a></dd></div>
+        <div><dt>{{ c.contact.github_label }}</dt><dd><a href="{{ site.github }}" rel="me noopener" target="_blank" dir="ltr">{{ site.github_short }}<span class="sr-only"> {{ c.ui.new_tab }}</span></a></dd></div>
+        <div><dt>{{ c.contact.location_label }}</dt><dd>{{ c.contact.location }}</dd></div>
+      </dl>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <figure class="qr">
+      <img src="/assets/qr.svg" width="148" height="148" alt="{{ c.contact.qr_alt }}">
+      <figcaption>{{ c.contact.qr_label }}<br><span dir="ltr">{{ site.base_url | replace('https://','') }}</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <svg class="footer-star" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></svg>
+    <p>© 2026 Haitham Dhaimi. {{ c.ui.updated }}.</p>
+    <p><a href="{{ site.repo }}" rel="noopener" target="_blank">{{ c.ui.source }}<span class="sr-only"> {{ c.ui.new_tab }}</span></a> <a href="#top">{{ c.ui.back_top }}</a></p>
+  </div>
+</footer>
+
+<script src="/assets/main.js?v={{ js_v }}" defer></script>
+</body>
+</html>

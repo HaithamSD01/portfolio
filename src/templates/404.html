@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>{{ theme_script }}</script>
+<title>{{ pages.fr.notfound.title }} — {{ site.name }}</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v={{ css_v }}">
+</head>
+<body>
+<main class="nf wrap">
+  <div>
+    <svg class="footer-star nf-star" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></svg>
+    <h1>404</h1>
+    {% for code in ['fr', 'en', 'ar'] %}{% set p = pages[code] %}
+    <p lang="{{ code }}" dir="{{ p.dir }}"><b>{{ p.notfound.title }}.</b> {{ p.notfound.text }}</p>
+    {% endfor %}
+    <ul>
+      {% for code in ['fr', 'en', 'ar'] %}{% set p = pages[code] %}
+      <li><a href="{{ p.path }}" lang="{{ code }}" dir="{{ p.dir }}" hreflang="{{ code }}">{{ p.notfound.back }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+</body>
+</html>
