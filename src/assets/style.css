@@ -202,6 +202,10 @@ abbr{text-decoration:none}
 .proof-label{font-weight:600}
 .proof-note{color:var(--muted)}
 .proof-note::before{content:"— "}
+.case-program{border-inline-start-color:var(--ornament)}
+.program-kicker{display:inline-block;font-size:.8rem;font-weight:600;color:var(--gold-text);border:1px solid var(--ornament-soft);border-radius:999px;padding:.1rem .65rem;margin-block-end:.8rem}
+.program-proofs{margin-block-start:1.25rem;padding-block-start:1rem;border-block-start:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.program-proofs b{color:var(--text);font-weight:600}
 .overlap{max-width:78ch;color:var(--muted);font-size:.97rem;padding:1.1rem 1.25rem;border:1px dashed var(--line-strong);border-radius:12px}
 .overlap b{color:var(--text)}
 
@@ -251,6 +255,7 @@ abbr{text-decoration:none}
 .trainings li:first-child{padding-block-start:0}
 .trainings h3{font-size:1rem;font-weight:600}
 .trainings p{display:flex;flex-wrap:wrap;gap:.2rem 1rem;color:var(--muted);font-size:.9rem}
+.note-badge{display:inline-block!important;margin-block-start:.4rem;font-size:.8rem!important;color:var(--accent)!important;border:1px solid currentColor;border-radius:999px;padding:.05rem .6rem}
 .exam-badge{display:inline-block!important;margin-block-start:.4rem;font-size:.8rem!important;color:var(--warn)!important;border:1px solid currentColor;border-radius:999px;padding:.05rem .6rem}
 
 /* ---------- À propos ---------- */
@@ -311,7 +316,12 @@ abbr{text-decoration:none}
   .nav-links a{padding:.75rem .5rem;font-size:1rem}
   .theme-switch{align-self:flex-start}
   .theme-txt{display:inline}
-  .header-row{flex-wrap:wrap;position:relative}
+  .header-row{flex-wrap:nowrap;position:relative;gap:.5rem}
+  .no-js .header-row{flex-wrap:wrap}
+  .brand{min-width:0;flex:0 1 auto}
+  .brand span{display:block;overflow:hidden;text-overflow:ellipsis}
+  .lang-switch a,.lang-current{min-width:2rem;padding:0 .3rem}
+  .menu-toggle{flex:none}
   .hero-grid,.case-grid,.bg-grid,.about-grid,.skill-grid{grid-template-columns:minmax(0,1fr)}
   .hero-art{order:-1;width:min(40vw,170px);justify-self:start}
   [dir="rtl"] .hero-art{justify-self:start}
@@ -325,6 +335,12 @@ abbr{text-decoration:none}
   .contact-list>div{grid-template-columns:minmax(0,1fr);gap:.1rem}
   .footer-row p:last-child{margin-inline-start:0}
   .brand span{font-size:1.1rem}
+}
+
+@media (max-width:380px){
+  .brand{gap:.4rem}
+  .brand span{font-size:1rem}
+  .brand-star{width:22px;height:22px}
 }
 
 @media (prefers-reduced-motion:reduce){

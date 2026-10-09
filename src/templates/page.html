@@ -229,6 +229,26 @@
     </article>
     {% endfor %}
 
+    {% set pg = c.program %}
+    <article class="case case-program" id="huawei" aria-labelledby="huawei-title">
+      <p class="program-kicker">{{ pg.kicker }}</p>
+      <div class="case-meta">
+        <p class="case-org" lang="en">{{ pg.org }}</p>
+        <p class="case-sub"><span>{{ pg.role }}</span><span>{{ pg.place }}</span><span>{{ pg.dates }}</span></p>
+      </div>
+      <h3 id="huawei-title" class="case-title">{{ pg.title }}</h3>
+      <div class="case-grid">
+        <div class="case-context"><p>{{ pg.text }}</p></div>
+        <div class="case-results">
+          <ul class="star-list">
+            {% for r in pg.points %}<li>{{ r | safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <p class="program-proofs"><b>{{ pg.proofs_label }} :</b> {{ pg.proofs | join(' · ') }}</p>
+    </article>
+
     <p class="overlap">{{ c.overlap | safe }}</p>
   </div>
 </section>
@@ -301,6 +321,7 @@
           <h3>{{ t.title }}</h3>
           <p><span>{{ t.org }}</span><span>{{ t.date }}</span></p>
           {% if t.exam is defined and t.exam %}<p class="exam-badge">{{ c.trainings.exam_note }}</p>{% endif %}
+          {% if t.note is defined %}<p class="note-badge">{{ t.note }}</p>{% endif %}
         </li>
         {% endfor %}
       </ul>

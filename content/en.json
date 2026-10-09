@@ -316,13 +316,13 @@
         "school": "SUPTECH-SANTÉ, Université Internationale Bleue — Mohammedia",
         "dates": "2025 – 2028",
         "title": "Engineering degree, digital engineering & AI in healthcare",
-        "text": "Currently in 2nd year. Databases, signal processing, medical imaging, physiology, object-oriented programming, health-data law."
+        "text": "<b>2nd year (current):</b> artificial intelligence techniques, machine learning, data mining for medical applications, medical image processing with a mini-project, advanced databases, front-end web development.<br><b>1st year:</b> medical imaging, signal processing, physiology and pathophysiology, object-oriented programming in C++, databases, operations research, statistics, law."
       },
       {
         "school": "SUPTECH-SANTÉ — Mohammedia",
         "dates": "2023 – 2025",
         "title": "Integrated preparatory classes",
-        "text": "Mathematics, physics and engineering sciences."
+        "text": "Analysis, algebra, topology, probability and statistics; electromagnetism, optics, thermodynamics, solid mechanics; control systems, signal processing, algorithms and programming, CAD, FabLab, biology."
       },
       {
         "school": "Lycée Alexandre — Casablanca",
@@ -350,9 +350,10 @@
         "exam": true
       },
       {
-        "title": "Seeds for the Future — training programme (5G, cloud, AI)",
-        "org": "Huawei, Dongguan & Shenzhen, China",
-        "date": "August 2025"
+        "title": "Digital Power",
+        "org": "Huawei ICT Academy",
+        "date": "October 2025",
+        "note": "course exam passed · not an HCIA certification"
       },
       {
         "title": "What Is Generative AI?",
@@ -449,5 +450,24 @@
     "text": "Cette page existe aussi en français.",
     "link": "Lire en français",
     "href": "/"
+  },
+  "program": {
+    "kicker": "International programme",
+    "org": "Huawei — Seeds for the Future 2025",
+    "role": "Participant representing Morocco",
+    "place": "Dongguan & Shenzhen, China",
+    "dates": "August 2025 · 7 days",
+    "title": "A week at Huawei, on the engineering side",
+    "text": "Selected to represent Morocco in Seeds for the Future, Huawei's flagship programme for young digital talent (Huawei Talent Development Flagship Project).",
+    "points": [
+      "<b>Intensive training</b> delivered by Huawei engineers: cloud computing, artificial intelligence, 5G and digital energy (Digital Power).",
+      "<b>Cross-cultural teamwork</b> with students from more than ten countries.",
+      "<b>What came next:</b> I followed up with the Huawei ICT Academy Digital Power course and passed its exam in October 2025."
+    ],
+    "proofs_label": "Proof",
+    "proofs": [
+      "Huawei programme completion certificate, 22 August 2025",
+      "Huawei ICT Academy “Digital Power” certificate, no. ICT20251018001669"
+    ]
   }
 }
