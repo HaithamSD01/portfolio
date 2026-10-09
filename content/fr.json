@@ -207,12 +207,10 @@
     "intro": "Des projets plus courts, menés en cours, en compétition ou de ma propre initiative.",
     "items": [
       {
-        "tag": "Santé publique, outil web",
+        "tag": "En cours",
         "title": "Rage : agissez vite",
-        "date": "Septembre 2026",
-        "text": "Un outil de sensibilisation en arabe, en darija et en français, pensé pour quelqu'un qui vient d'être mordu ou griffé par un animal : premier geste, évaluation du risque en deux questions, centres de vaccination à Casablanca, Mohammedia et dans la région avec la source de chaque adresse, et calcul des dates de doses. Il informe, il ne remplace pas un médecin.",
-        "href": "https://github.com/HaithamSD01/rabies-alert",
-        "link": "Code sur GitHub"
+        "date": "2026",
+        "text": "Un outil de sensibilisation à la rage, en arabe, en darija et en français : quoi faire juste après une morsure et où se faire vacciner. Projet en cours de développement."
       },
       {
         "tag": "3<sup>e</sup> prix, catégorie e-Gouvernement",

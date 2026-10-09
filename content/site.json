@@ -1,7 +1,13 @@
 {
   "base_url": "https://haithamdhaimiportfolio.netlify.app",
   "name": "Haitham Dhaimi",
-  "alternate_names": ["Haitham DHAIMI", "Dhaimi Haitham", "DHAIMI Haitham"],
+  "alternate_names": [
+    "Haitham DHAIMI",
+    "Dhaimi Haitham",
+    "DHAIMI Haitham",
+    "هيثم الدهيمي",
+    "الدهيمي هيثم"
+  ],
   "email": "dhaimihaitham@gmail.com",
   "linkedin": "https://www.linkedin.com/in/haitham-dhaimi-6b894b278",
   "linkedin_short": "linkedin.com/in/haitham-dhaimi-6b894b278",
@@ -9,11 +15,41 @@
   "github_short": "github.com/HaithamSD01",
   "repo": "https://github.com/HaithamSD01/portfolio",
   "date_modified": "2026-10-09",
-  "cv": {"fr": "/cv/Haitham_Dhaimi_CV_FR.pdf", "en": "/cv/Haitham_Dhaimi_CV_EN.pdf"},
+  "cv": {
+    "fr": "/cv/Haitham_Dhaimi_CV_FR.pdf",
+    "en": "/cv/Haitham_Dhaimi_CV_EN.pdf"
+  },
   "languages": [
-    {"code": "fr", "label": "Français", "short": "FR", "path": "/"},
-    {"code": "en", "label": "English", "short": "EN", "path": "/en/"},
-    {"code": "ar", "label": "العربية", "short": "ع", "path": "/ar/"}
+    {
+      "code": "fr",
+      "label": "Français",
+      "short": "FR",
+      "path": "/"
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN",
+      "path": "/en/"
+    },
+    {
+      "code": "ar",
+      "label": "العربية",
+      "short": "ع",
+      "path": "/ar/"
+    }
   ],
-  "knows_about": ["Intelligence artificielle", "Systèmes multi-agents", "Microsoft AutoGen", "Microsoft Azure", "Santé numérique", "Contrôle qualité pharmaceutique", "HPLC", "Bonnes pratiques de fabrication (BPF/GMP)", "Python", "FastAPI", "Docker"]
+  "knows_about": [
+    "Intelligence artificielle",
+    "Systèmes multi-agents",
+    "Microsoft AutoGen",
+    "Microsoft Azure",
+    "Santé numérique",
+    "Contrôle qualité pharmaceutique",
+    "HPLC",
+    "Bonnes pratiques de fabrication (BPF/GMP)",
+    "Python",
+    "FastAPI",
+    "Docker"
+  ]
 }

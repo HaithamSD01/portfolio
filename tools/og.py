@@ -22,7 +22,8 @@ body{{background:#F5F0E4;color:#13203A;font-family:"Plex",sans-serif;position:re
 .frame{{position:absolute;inset:28px;border:1.5px solid rgba(179,130,15,.45);border-radius:22px}}
 .content{{position:absolute;inset-block:0;inset-inline-start:88px;width:690px;display:flex;flex-direction:column;justify-content:center;gap:22px}}
 .kicker{{color:#0A6B64;font-weight:600;font-size:{kicker_size}px}}
-h1{{font-family:"Amiri",serif;font-size:104px;line-height:1;font-weight:700}}
+@font-face{{font-family:"Amiri";font-weight:700;src:url("{fonts}/amiri-arabic-700-normal.woff2");unicode-range:U+0600-06FF,U+FB50-FDFF,U+FE70-FEFF}}
+h1{{font-family:"Amiri",serif;font-size:104px;line-height:1;padding-block-end:{h1_lh}px;font-weight:700}}
 h1 span{{color:#7F5905}}
 .title{{font-size:{title_size}px;line-height:1.35;font-weight:600;max-width:640px}}
 .url{{align-self:flex-start;margin-block-start:14px;font-size:22px;color:#4A5470;direction:ltr;unicode-bidi:isolate;letter-spacing:.01em}}
@@ -31,7 +32,7 @@ h1 span{{color:#7F5905}}
 <div class="pattern"></div><div class="frame"></div>
 <div class="content">
   <p class="kicker">{kicker}</p>
-  <h1 lang="en">Haitham <span>Dhaimi</span></h1>
+  <h1{name_lang}>{first} <span>{last}</span></h1>
   <p class="title">{title}</p>
   <p class="url">{url}</p>
 </div>
@@ -63,6 +64,10 @@ def make_og_images(site, pages, out: Path):
                 title=html.escape(c["meta"]["og_description"]),
                 url=html.escape(url),
                 kicker_size=30 if rtl else 26,
+                name_lang="" if "name_first" in c["hero"] else ' lang="en"',
+                first=html.escape(c["hero"].get("name_first", "Haitham")),
+                last=html.escape(c["hero"].get("name_last", "Dhaimi")),
+                h1_lh="34" if rtl else "0",
                 title_size=30 if rtl else 28,
             )
             tmp = out / f"_og_{code}.html"

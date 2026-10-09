@@ -207,12 +207,10 @@
     "intro": "Shorter projects, done in class, in competition or on my own.",
     "items": [
       {
-        "tag": "Public health, web tool",
+        "tag": "In progress",
         "title": "Rabies: act fast",
-        "date": "September 2026",
-        "text": "An awareness tool in Arabic, Moroccan Darija and French for someone who has just been bitten or scratched by an animal: first aid, a two-question risk check, vaccination centres in Casablanca, Mohammedia and the surrounding region with the source of each address, and a dose-date calculator. It informs; it does not replace a doctor.",
-        "href": "https://github.com/HaithamSD01/rabies-alert",
-        "link": "Code on GitHub"
+        "date": "2026",
+        "text": "A rabies awareness tool in Arabic, Moroccan Darija and French: what to do right after a bite, and where to get vaccinated. Still in development."
       },
       {
         "tag": "3rd prize, e-Government category",
