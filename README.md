@@ -49,4 +49,4 @@ Pour changer un texte : modifier `content/fr.json`, puis la même clé dans `en.
 
 Le code est libre de réutilisation. Les textes, le CV et les contenus personnels restent les miens : merci de ne pas les reprendre.
 
-Contact : dhaimihaitham@gmail.com · [LinkedIn](https://www.linkedin.com/in/haitham-dhaimi-6b894b278)
+Contact : dhaimihaithambusiness@gmail.com · [LinkedIn](https://www.linkedin.com/in/haitham-dhaimi-6b894b278)
