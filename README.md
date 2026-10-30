@@ -18,7 +18,7 @@ Un portfolio doit charger vite, rester lisible sur un vieux téléphone et ne ri
 - Contraste des couleurs conforme WCAG 2.2 AA en thème clair et sombre (texte secondaire ≥ 6:1).
 - Navigation complète au clavier, lien d'évitement, `prefers-reduced-motion` respecté.
 - Politique de sécurité du contenu stricte (`public/_headers`) : aucun script externe, aucun style en ligne.
-- Aucun numéro de téléphone publié, aucun document interne d'entreprise. Les rapports de stage sont confidentiels : ils ne sont pas dans ce dépôt.
+- Aucun numéro de téléphone sur les pages du site (il figure seulement dans les CV PDF, non indexés par les moteurs de recherche) et aucun document interne d'entreprise. Les rapports de stage sont confidentiels : ils ne sont pas dans ce dépôt.
 - Les deux préparations (CompTIA Security+, AWS AI Practitioner) sont affichées comme **formations**, pas comme certifications : je n'ai pas encore passé les examens officiels.
 
 ## Structure
