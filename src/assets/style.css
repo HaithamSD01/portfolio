@@ -208,6 +208,7 @@ abbr{text-decoration:none}
 .program-proofs b{color:var(--text);font-weight:600}
 .overlap{max-width:78ch;color:var(--muted);font-size:.97rem;padding:1.1rem 1.25rem;border:1px dashed var(--line-strong);border-radius:12px}
 .overlap b{color:var(--text)}
+.overlap{margin-block-end:1.75rem}
 
 /* Diagramme */
 .diagram{margin:1.5rem 0;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:1rem}

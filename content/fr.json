@@ -35,7 +35,7 @@
     "copy_fail": "Copie impossible, l'adresse est affichée à côté.",
     "suggest_dismiss": "Fermer",
     "details_more": "Lire l'étude de cas complète",
-    "updated": "Dernière mise à jour : 9 octobre 2026",
+    "updated": "Dernière mise à jour : 5 novembre 2026",
     "source": "Code source du site",
     "back_top": "Revenir en haut",
     "new_tab": "(nouvel onglet)",
@@ -376,6 +376,12 @@
     "title": "Engagement",
     "items": [
       {
+        "org": "AMIIA",
+        "dates": "depuis juil. 2026",
+        "title": "Membre actif et délégué",
+        "text": "Association Marocaine pour l'Innovation en Intelligence Artificielle. Représentation de l'association dans des sommets et forums du secteur, dont AI-MEDX 2026 à l'UM6P. Plaidoyer pour l'IA explicable, la protection des données et un cadre éthique en santé numérique."
+      },
+      {
         "org": "AIESEC Mohammedia",
         "dates": "sept. 2025 – janv. 2026",
         "title": "Membre, puis vice-président Outgoing Global Talent",
@@ -452,6 +458,7 @@
     "href": "/en/"
   },
   "program": {
+    "id": "huawei",
     "kicker": "Programme international",
     "org": "Huawei — Seeds for the Future 2025",
     "role": "Participant, représentant du Maroc",
@@ -468,6 +475,25 @@
     "proofs": [
       "Certificat de fin de programme Huawei, 22 août 2025",
       "Certificat Huawei ICT Academy « Digital Power », n° ICT20251018001669"
+    ]
+  },
+  "event": {
+    "id": "aimedx",
+    "kicker": "Événement international",
+    "org": "AI-MEDX 2026 — AI in Medicine with eXplainability",
+    "role": "Délégué officiel de l'AMIIA",
+    "place": "UM6P, Benguerir",
+    "dates": "2 – 4 novembre 2026",
+    "title": "Trois jours sur l'IA médicale explicable",
+    "text": "Sommet international sur l'IA en médecine et son explicabilité, accueilli par l'Université Mohammed VI Polytechnique. J'y ai représenté l'AMIIA, l'association dont je suis membre actif, au sein de sa délégation.",
+    "points": [
+      "<b>Ce que j'y ai suivi :</b> des interventions de chercheurs, de médecins et d'industriels sur l'IA clinique, l'explicabilité (XAI), la souveraineté des données de santé et la formation médicale.",
+      "<b>Ce que j'y ai fait :</b> représenter l'association et échanger avec des chercheurs, des cliniciens et des ingénieurs du Maroc et de l'étranger.",
+      "<b>Ce que j'en retiens :</b> en santé, la performance brute ne suffit pas, un modèle doit pouvoir être audité pour gagner la confiance des cliniciens. C'est le réflexe de mes deux stages : un journal d'audit sur Cosmos DB d'un côté, l'intégrité des données ALCOA+ de l'autre."
+    ],
+    "proofs_label": "Preuves",
+    "proofs": [
+      "Attestation de participation de l'AMIIA, émise à Rabat le 4 novembre 2026 (réf. AMIIA/AI-MEDX/2026/004)"
     ]
   }
 }

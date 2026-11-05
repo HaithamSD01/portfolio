@@ -1,3 +1,23 @@
+{% macro program_card(pg) %}
+    <article class="case case-program" id="{{ pg.id }}" aria-labelledby="{{ pg.id }}-title">
+      <p class="program-kicker">{{ pg.kicker }}</p>
+      <div class="case-meta">
+        <p class="case-org" lang="en">{{ pg.org }}</p>
+        <p class="case-sub"><span>{{ pg.role }}</span><span>{{ pg.place }}</span><span>{{ pg.dates }}</span></p>
+      </div>
+      <h3 id="{{ pg.id }}-title" class="case-title">{{ pg.title }}</h3>
+      <div class="case-grid">
+        <div class="case-context"><p>{{ pg.text }}</p></div>
+        <div class="case-results">
+          <ul class="star-list">
+            {% for r in pg.points %}<li>{{ r | safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <p class="program-proofs"><b>{{ pg.proofs_label }} :</b> {{ pg.proofs | join(' · ') }}</p>
+    </article>
+{% endmacro -%}
 <!DOCTYPE html>
 <html lang="{{ c.lang }}" dir="{{ c.dir }}" class="no-js">
 <head>
@@ -229,27 +249,11 @@
     </article>
     {% endfor %}
 
-    {% set pg = c.program %}
-    <article class="case case-program" id="huawei" aria-labelledby="huawei-title">
-      <p class="program-kicker">{{ pg.kicker }}</p>
-      <div class="case-meta">
-        <p class="case-org" lang="en">{{ pg.org }}</p>
-        <p class="case-sub"><span>{{ pg.role }}</span><span>{{ pg.place }}</span><span>{{ pg.dates }}</span></p>
-      </div>
-      <h3 id="huawei-title" class="case-title">{{ pg.title }}</h3>
-      <div class="case-grid">
-        <div class="case-context"><p>{{ pg.text }}</p></div>
-        <div class="case-results">
-          <ul class="star-list">
-            {% for r in pg.points %}<li>{{ r | safe }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <p class="program-proofs"><b>{{ pg.proofs_label }} :</b> {{ pg.proofs | join(' · ') }}</p>
-    </article>
+    {{ program_card(c.program) }}
 
     <p class="overlap">{{ c.overlap | safe }}</p>
+
+    {{ program_card(c.event) }}
   </div>
 </section>
 

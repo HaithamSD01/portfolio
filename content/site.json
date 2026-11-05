@@ -14,7 +14,7 @@
   "github": "https://github.com/HaithamSD01",
   "github_short": "github.com/HaithamSD01",
   "repo": "https://github.com/HaithamSD01/portfolio",
-  "date_modified": "2026-10-09",
+  "date_modified": "2026-11-05",
   "cv": {
     "fr": "/cv/Haitham_Dhaimi_CV_FR.pdf",
     "en": "/cv/Haitham_Dhaimi_CV_EN.pdf"
@@ -53,7 +53,8 @@
     "Docker",
     "Cloud computing",
     "5G",
-    "Traitement d'image médicale"
+    "Traitement d'image médicale",
+    "Explicabilité de l'IA (XAI)"
   ],
   "google_site_verification": "c2ZruzY6YrciRENj2S1ErYR78Nk-eEUd83EqWyfuOBw"
 }

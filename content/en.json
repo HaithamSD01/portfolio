@@ -35,7 +35,7 @@
     "copy_fail": "Couldn't copy, the address is shown next to it.",
     "suggest_dismiss": "Close",
     "details_more": "Read the full case study",
-    "updated": "Last updated: 9 October 2026",
+    "updated": "Last updated: 5 November 2026",
     "source": "Site source code",
     "back_top": "Back to top",
     "new_tab": "(opens in a new tab)",
@@ -376,6 +376,12 @@
     "title": "Involvement",
     "items": [
       {
+        "org": "AMIIA",
+        "dates": "since Jul 2026",
+        "title": "Active member and delegate",
+        "text": "Moroccan Association for Innovation in Artificial Intelligence. Representing the association at sector summits and forums, including AI-MEDX 2026 at UM6P. Advocating for explainable AI, data protection and an ethical framework in digital health."
+      },
+      {
         "org": "AIESEC Mohammedia",
         "dates": "Sep 2025 – Jan 2026",
         "title": "Member, then Vice President Outgoing Global Talent",
@@ -452,6 +458,7 @@
     "href": "/"
   },
   "program": {
+    "id": "huawei",
     "kicker": "International programme",
     "org": "Huawei — Seeds for the Future 2025",
     "role": "Participant representing Morocco",
@@ -468,6 +475,25 @@
     "proofs": [
       "Huawei programme completion certificate, 22 August 2025",
       "Huawei ICT Academy “Digital Power” certificate, no. ICT20251018001669"
+    ]
+  },
+  "event": {
+    "id": "aimedx",
+    "kicker": "International event",
+    "org": "AI-MEDX 2026 — AI in Medicine with eXplainability",
+    "role": "Official delegate of AMIIA",
+    "place": "UM6P, Benguerir",
+    "dates": "2 – 4 November 2026",
+    "title": "Three days on explainable medical AI",
+    "text": "An international summit on AI in medicine and its explainability, hosted by Mohammed VI Polytechnic University. I represented AMIIA, the association where I am an active member, as part of its delegation.",
+    "points": [
+      "<b>What I followed:</b> talks by researchers, physicians and industry leaders on clinical AI, explainability (XAI), health-data sovereignty and medical education.",
+      "<b>What I did:</b> represented the association and exchanged with researchers, clinicians and engineers from Morocco and abroad.",
+      "<b>What I take away:</b> in healthcare, raw performance is not enough; a model has to be auditable to earn clinicians' trust. That is the habit from both my internships: an audit log on Cosmos DB on one side, ALCOA+ data integrity on the other."
+    ],
+    "proofs_label": "Proof",
+    "proofs": [
+      "AMIIA certificate of participation, issued in Rabat on 4 November 2026 (ref. AMIIA/AI-MEDX/2026/004)"
     ]
   }
 }

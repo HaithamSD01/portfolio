@@ -209,6 +209,7 @@ def jsonld(site, c, page_url):
             },
             "alumniOf": {"@type": "HighSchool", "name": "Lycée Alexandre"},
             "knowsAbout": site["knows_about"],
+            "memberOf": {"@type": "Organization", "name": "AMIIA — Association Marocaine pour l'Innovation en Intelligence Artificielle"},
             "knowsLanguage": ["ar", "fr", "en"],
             "sameAs": [site["linkedin"], site["github"]],
         },
