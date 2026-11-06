@@ -4,11 +4,11 @@
   "path": "/en/",
   "locale": "en_US",
   "meta": {
-    "title": "Haitham Dhaimi — Engineering student in AI and digital health",
-    "description": "Haitham Dhaimi, engineering student at SUPTECH-SANTÉ (Mohammedia, Morocco). A multi-agent AI system shipped to production on Azure, and a pharmaceutical quality-control internship at Promopharm (Hikma group). Projects, CV and contact.",
-    "og_title": "Haitham Dhaimi — AI and digital health",
-    "og_description": "Engineering student at SUPTECH-SANTÉ. A multi-agent system shipped to production on Azure, one month in a pharmaceutical quality-control lab.",
-    "job_title": "Engineering student in digital engineering and AI for healthcare"
+    "title": "Haitham Dhaimi — Engineering student in AI, data and digital engineering",
+    "description": "Haitham Dhaimi, engineering student in AI and digital engineering at SUPTECH-SANTÉ (Mohammedia, Morocco). A multi-agent AI system shipped to production on Azure, Huawei Seeds for the Future, and an internship in a regulated environment at Promopharm (Hikma group). Projects, CV and contact.",
+    "og_title": "Haitham Dhaimi — AI, data & digital engineering",
+    "og_description": "Engineering student at SUPTECH-SANTÉ. A multi-agent AI system shipped to production on Azure, Huawei Seeds for the Future, and healthcare as a field of choice.",
+    "job_title": "Engineering student in AI and digital engineering"
   },
   "ui": {
     "skip": "Skip to content",
@@ -35,7 +35,7 @@
     "copy_fail": "Couldn't copy, the address is shown next to it.",
     "suggest_dismiss": "Close",
     "details_more": "Read the full case study",
-    "updated": "Last updated: 5 November 2026",
+    "updated": "Last updated: 6 November 2026",
     "source": "Site source code",
     "back_top": "Back to top",
     "new_tab": "(opens in a new tab)",
@@ -47,12 +47,13 @@
     "theme_auto_long": "Automatic theme (follows your system)",
     "theme_light_long": "Light theme",
     "theme_dark_long": "Dark theme",
-    "home": "Home"
+    "home": "Home",
+    "cv_short": "One-page version (PDF)"
   },
   "hero": {
-    "kicker": "Digital engineering & AI for healthcare",
-    "lead": "I study digital engineering and AI applied to healthcare at <strong>SUPTECH-SANTÉ</strong> (Mohammedia, Morocco). This summer I shipped a <strong>multi-agent system to production on Azure</strong>, and spent a month in a <strong>pharmaceutical quality-control lab</strong>. What I care about: building digital tools that a regulated healthcare environment can actually adopt.",
-    "availability": "Open to internships and projects in digital health, AI and cloud."
+    "kicker": "AI, data & digital engineering",
+    "lead": "I study digital engineering and artificial intelligence at <strong>SUPTECH-SANTÉ</strong> (Mohammedia, Morocco). This summer I shipped a <strong>generative-AI multi-agent system to production on Azure</strong>, and spent a month in a <strong>regulated environment</strong>, in pharmaceutical quality control. What I care about: building reliable digital tools that teams actually adopt, with healthcare as my field of choice.",
+    "availability": "Open to internships and projects in AI, data, cloud and software, in healthcare and beyond."
   },
   "metrics": [
     {
@@ -68,13 +69,13 @@
       "label": "median production latency, against a 60 s threshold"
     },
     {
-      "value": "64 pp.",
-      "label": "internship report written as an audit (Promopharm)"
+      "value": "3rd prize",
+      "label": "RallyIA hackathon, e-Government category"
     }
   ],
   "xp": {
     "title": "Two internships, two worlds",
-    "intro": "Summer 2026: a development project taken solo all the way to production, and an immersion in a GMP-regulated pharmaceutical lab. Every number below is defined and can be checked."
+    "intro": "Summer 2026: an AI project taken solo all the way to production, and an immersion in a regulated environment where quality, traceability and compliance decide everything. Every number below is defined and can be checked."
   },
   "cases": [
     {
@@ -138,7 +139,7 @@
       "place": "Had Soualem, Morocco",
       "role": "Intern, physico-chemical quality control",
       "dates": "13 July – 13 August 2026",
-      "title": "One month in a pharmaceutical quality-control lab",
+      "title": "One month in a regulated environment: pharmaceutical quality control",
       "problem": "You can't judge a medicine by looking at it. I wanted to see from the inside how a lab turns a measurement into a compliance decision, and what it takes for that decision to still hold up in front of an inspector years after the batch was made.",
       "my_role": "First-year engineering immersion internship, supervised by Mr. Hicham Touil, lab supervisor. I rotated across raw materials, finished products, stability and chromatography: watching first, then practising under supervision.",
       "results": [
@@ -207,22 +208,10 @@
     "intro": "Shorter projects, done in class, in competition or on my own.",
     "items": [
       {
-        "tag": "In progress",
-        "title": "Rabies: act fast",
-        "date": "2026",
-        "text": "A rabies awareness tool in Arabic, Moroccan Darija and French: what to do right after a bite, and where to get vaccinated. Still in development."
-      },
-      {
         "tag": "3rd prize, e-Government category",
         "title": "RallyIA Future Lab Hackathon",
         "date": "Merzouga, 2026",
         "text": "Designed and pitched a digital-governance solution against other engineering student teams."
-      },
-      {
-        "tag": "Personal prototype",
-        "title": "Suite CQ: a simulated quality-control lab",
-        "date": "2026",
-        "text": "A prototype that simulates a QMS/LIMS for a physico-chemical control lab, following on from my digitalisation proposal at Promopharm."
       },
       {
         "tag": "Machine learning",
@@ -231,10 +220,22 @@
         "text": "Supervised model in Python covering the whole pipeline: data cleaning and preparation, feature selection, training and evaluation."
       },
       {
+        "tag": "Personal prototype",
+        "title": "Suite CQ: a simulated quality-control lab",
+        "date": "2026",
+        "text": "A prototype that simulates a QMS/LIMS for a physico-chemical control lab, following on from my digitalisation proposal at Promopharm."
+      },
+      {
         "tag": "IoT, embedded systems",
         "title": "Vital-signs wristband",
         "date": "2024 – 2025",
         "text": "Hardware and embedded software prototype (Arduino, C++) that continuously measures heart rate, blood pressure and body temperature."
+      },
+      {
+        "tag": "In progress",
+        "title": "Rabies: act fast",
+        "date": "2026",
+        "text": "A rabies awareness tool in Arabic, Moroccan Darija and French: what to do right after a bite, and where to get vaccinated. Still in development."
       }
     ]
   },

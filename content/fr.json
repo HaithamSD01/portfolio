@@ -4,11 +4,11 @@
   "path": "/",
   "locale": "fr_FR",
   "meta": {
-    "title": "Haitham Dhaimi — Élève ingénieur en IA et santé numérique",
-    "description": "Haitham Dhaimi, élève ingénieur à SUPTECH-SANTÉ (Mohammedia, Maroc). Système multi-agents IA déployé sur Azure, stage en contrôle qualité pharmaceutique chez Promopharm (groupe Hikma). Projets, CV et contact.",
-    "og_title": "Haitham Dhaimi — IA et santé numérique",
-    "og_description": "Élève ingénieur à SUPTECH-SANTÉ. Un système multi-agents mis en production sur Azure, un mois en laboratoire de contrôle qualité pharmaceutique.",
-    "job_title": "Élève ingénieur en ingénierie digitale et IA en santé"
+    "title": "Haitham Dhaimi — Élève ingénieur en IA, data et ingénierie digitale",
+    "description": "Haitham Dhaimi, élève ingénieur en IA et ingénierie digitale à SUPTECH-SANTÉ (Mohammedia, Maroc). Système multi-agents d'IA mis en production sur Azure, Huawei Seeds for the Future, stage en environnement réglementé chez Promopharm (groupe Hikma). Projets, CV et contact.",
+    "og_title": "Haitham Dhaimi — IA, data & ingénierie digitale",
+    "og_description": "Élève ingénieur à SUPTECH-SANTÉ. Un système multi-agents d'IA mis en production sur Azure, Huawei Seeds for the Future, et la santé comme domaine de prédilection.",
+    "job_title": "Élève ingénieur en IA et ingénierie digitale"
   },
   "ui": {
     "skip": "Aller au contenu",
@@ -35,7 +35,7 @@
     "copy_fail": "Copie impossible, l'adresse est affichée à côté.",
     "suggest_dismiss": "Fermer",
     "details_more": "Lire l'étude de cas complète",
-    "updated": "Dernière mise à jour : 5 novembre 2026",
+    "updated": "Dernière mise à jour : 6 novembre 2026",
     "source": "Code source du site",
     "back_top": "Revenir en haut",
     "new_tab": "(nouvel onglet)",
@@ -47,12 +47,13 @@
     "theme_auto_long": "Thème automatique (suit le système)",
     "theme_light_long": "Thème clair",
     "theme_dark_long": "Thème sombre",
-    "home": "Accueil"
+    "home": "Accueil",
+    "cv_short": "Version 1 page (PDF)"
   },
   "hero": {
-    "kicker": "Ingénierie digitale & IA en santé",
-    "lead": "J'étudie l'ingénierie digitale et l'IA appliquées à la santé à <strong>SUPTECH-SANTÉ</strong> (Mohammedia). Cet été, j'ai mis en production un <strong>système multi-agents sur Azure</strong>, et j'ai passé un mois dans un <strong>laboratoire de contrôle qualité pharmaceutique</strong>. Ce qui m'intéresse : construire des outils numériques qu'un environnement de santé réglementé peut vraiment adopter.",
-    "availability": "Ouvert aux stages et aux projets en santé numérique, IA et cloud."
+    "kicker": "IA, data & ingénierie digitale",
+    "lead": "J'étudie l'ingénierie digitale et l'intelligence artificielle à <strong>SUPTECH-SANTÉ</strong> (Mohammedia). Cet été, j'ai mis en production un <strong>système multi-agents d'IA générative sur Azure</strong>, et j'ai travaillé un mois dans un <strong>environnement réglementé</strong>, en contrôle qualité pharmaceutique. Ce qui m'intéresse : construire des outils numériques fiables, que des équipes adoptent vraiment, avec la santé comme domaine de prédilection.",
+    "availability": "Ouvert aux stages et aux projets en IA, data, cloud et développement, dans la santé comme dans d'autres secteurs."
   },
   "metrics": [
     {
@@ -68,13 +69,13 @@
       "label": "latence médiane en production, pour un seuil de 60 s"
     },
     {
-      "value": "64 p.",
-      "label": "rapport de stage structuré comme un audit (Promopharm)"
+      "value": "3<sup>e</sup> prix",
+      "label": "hackathon RallyIA, catégorie e-Gouvernement"
     }
   ],
   "xp": {
     "title": "Deux stages, deux mondes",
-    "intro": "Été 2026 : un projet de développement mené seul jusqu'en production, et une immersion dans un laboratoire pharmaceutique soumis aux BPF. Chaque chiffre ci-dessous est défini et vérifiable."
+    "intro": "Été 2026 : un projet d'IA mené seul jusqu'en production, et une immersion dans un environnement réglementé, où qualité, traçabilité et conformité décident de tout. Chaque chiffre ci-dessous est défini et vérifiable."
   },
   "cases": [
     {
@@ -138,7 +139,7 @@
       "place": "Had Soualem, Maroc",
       "role": "Stagiaire, contrôle qualité physico-chimique",
       "dates": "13 juillet – 13 août 2026",
-      "title": "Un mois dans un laboratoire de contrôle qualité pharmaceutique",
+      "title": "Un mois en environnement réglementé : le contrôle qualité pharmaceutique",
       "problem": "Un médicament ne se juge pas à l'œil. Je voulais voir de l'intérieur comment un laboratoire transforme une mesure en décision de conformité, et à quelles conditions cette décision reste défendable devant un inspecteur des années après la fabrication du lot.",
       "my_role": "Stage d'immersion de première année du cycle ingénieur, encadré par M. Hicham Touil, superviseur du laboratoire. J'ai tourné sur les postes matières premières, produits finis, stabilité et chromatographie : d'abord en observant, puis en pratiquant sous supervision.",
       "results": [
@@ -207,22 +208,10 @@
     "intro": "Des projets plus courts, menés en cours, en compétition ou de ma propre initiative.",
     "items": [
       {
-        "tag": "En cours",
-        "title": "Rage : agissez vite",
-        "date": "2026",
-        "text": "Un outil de sensibilisation à la rage, en arabe, en darija et en français : quoi faire juste après une morsure et où se faire vacciner. Projet en cours de développement."
-      },
-      {
         "tag": "3<sup>e</sup> prix, catégorie e-Gouvernement",
         "title": "Hackathon RallyIA Future Lab",
         "date": "Merzouga, 2026",
         "text": "Conception et pitch d'une solution de gouvernance numérique, face à d'autres équipes d'élèves ingénieurs."
-      },
-      {
-        "tag": "Prototype personnel",
-        "title": "Suite CQ : un laboratoire de contrôle qualité simulé",
-        "date": "2026",
-        "text": "Un prototype qui simule un QMS/LIMS de laboratoire de contrôle physico-chimique, dans le prolongement de ma proposition de digitalisation chez Promopharm."
       },
       {
         "tag": "Machine learning",
@@ -231,10 +220,22 @@
         "text": "Modèle supervisé en Python, du pipeline complet : nettoyage et préparation des données, choix des variables, entraînement puis évaluation."
       },
       {
+        "tag": "Prototype personnel",
+        "title": "Suite CQ : un laboratoire de contrôle qualité simulé",
+        "date": "2026",
+        "text": "Un prototype qui simule un QMS/LIMS de laboratoire de contrôle physico-chimique, dans le prolongement de ma proposition de digitalisation chez Promopharm."
+      },
+      {
         "tag": "IoT, systèmes embarqués",
         "title": "Bracelet de suivi des signes vitaux",
         "date": "2024 – 2025",
         "text": "Prototype matériel et logiciel embarqué (Arduino, C++) qui mesure en continu la fréquence cardiaque, la pression artérielle et la température corporelle."
+      },
+      {
+        "tag": "En cours",
+        "title": "Rage : agissez vite",
+        "date": "2026",
+        "text": "Un outil de sensibilisation à la rage, en arabe, en darija et en français : quoi faire juste après une morsure et où se faire vacciner. Projet en cours de développement."
       }
     ]
   },

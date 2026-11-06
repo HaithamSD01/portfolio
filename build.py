@@ -317,6 +317,7 @@ def build(make_og=False):
             cv_main=site["cv"][main_cv_lang],
             cv_other=site["cv"][other_cv_lang],
             cv_other_lang=other_cv_lang,
+            cv_short=site["cv"][main_cv_lang + "_short"],
             star_points=star_points(),
         )
         target = OUT / c["path"].strip("/") / "index.html" if c["path"] != "/" else OUT / "index.html"

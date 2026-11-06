@@ -14,10 +14,12 @@
   "github": "https://github.com/HaithamSD01",
   "github_short": "github.com/HaithamSD01",
   "repo": "https://github.com/HaithamSD01/portfolio",
-  "date_modified": "2026-11-05",
+  "date_modified": "2026-11-06",
   "cv": {
     "fr": "/cv/Haitham_Dhaimi_CV_FR.pdf",
-    "en": "/cv/Haitham_Dhaimi_CV_EN.pdf"
+    "en": "/cv/Haitham_Dhaimi_CV_EN.pdf",
+    "fr_short": "/cv/Haitham_Dhaimi_CV_1page_FR.pdf",
+    "en_short": "/cv/Haitham_Dhaimi_CV_1page_EN.pdf"
   },
   "languages": [
     {
@@ -41,6 +43,8 @@
   ],
   "knows_about": [
     "Intelligence artificielle",
+    "Science des données",
+    "IA générative",
     "Systèmes multi-agents",
     "Microsoft AutoGen",
     "Microsoft Azure",

@@ -137,6 +137,7 @@
       </div>
       <p class="hero-links">
         <a href="{{ cv_other }}" download hreflang="{{ cv_other_lang }}">{{ c.ui.cv_other }}</a>
+        <a href="{{ cv_short }}" download>{{ c.ui.cv_short }}</a>
         <a href="{{ site.linkedin }}" rel="me noopener" target="_blank">LinkedIn<span class="sr-only"> {{ c.ui.new_tab }}</span></a>
         <a href="{{ site.github }}" rel="me noopener" target="_blank">GitHub<span class="sr-only"> {{ c.ui.new_tab }}</span></a>
       </p>
@@ -161,7 +162,7 @@
   <h2 id="metrics-title" class="sr-only">{{ c.ui.metrics_label }}</h2>
   <div class="wrap">
     <ul class="metrics-list">
-      {% for m in c.metrics %}<li><span class="metric-value">{{ m.value }}</span><span class="metric-label">{{ m.label }}</span></li>
+      {% for m in c.metrics %}<li><span class="metric-value">{{ m.value | safe }}</span><span class="metric-label">{{ m.label }}</span></li>
       {% endfor %}
     </ul>
   </div>
