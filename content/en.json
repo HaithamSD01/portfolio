@@ -5,9 +5,9 @@
   "locale": "en_US",
   "meta": {
     "title": "Haitham Dhaimi — Engineering student in AI, data and digital engineering",
-    "description": "Haitham Dhaimi, engineering student in AI and digital engineering at SUPTECH-SANTÉ (Mohammedia, Morocco). A multi-agent AI system shipped to production on Azure, Huawei Seeds for the Future, and an internship in a regulated environment at Promopharm (Hikma group). Projects, CV and contact.",
+    "description": "Haitham Dhaimi, engineering student in AI and digital engineering at SUPTECH-SANTÉ (Mohammedia, Morocco). A multi-agent AI system shipped to production on Azure, Huawei Seeds for the Future, the NASA Space Apps Challenge 2026, and an internship in a regulated environment at Promopharm (Hikma group). Projects, CV and contact.",
     "og_title": "Haitham Dhaimi — AI, data & digital engineering",
-    "og_description": "Engineering student at SUPTECH-SANTÉ. A multi-agent AI system shipped to production on Azure, Huawei Seeds for the Future, and healthcare as a field of choice.",
+    "og_description": "Engineering student at SUPTECH-SANTÉ. A multi-agent AI system shipped to production on Azure, Huawei Seeds for the Future, the NASA Space Apps Challenge 2026, and healthcare as a field of choice.",
     "job_title": "Engineering student in AI and digital engineering"
   },
   "ui": {
@@ -35,7 +35,7 @@
     "copy_fail": "Couldn't copy, the address is shown next to it.",
     "suggest_dismiss": "Close",
     "details_more": "Read the full case study",
-    "updated": "Last updated: 6 November 2026",
+    "updated": "Last updated: 21 November 2026",
     "source": "Site source code",
     "back_top": "Back to top",
     "new_tab": "(opens in a new tab)",
@@ -260,6 +260,19 @@
           "pytest / pytest-cov",
           "Git / GitHub",
           "Jira, Agile"
+        ]
+      },
+      {
+        "title": "Used in competition",
+        "note": "NASA Space Apps 2026",
+        "items": [
+          "React",
+          "Vite",
+          "JavaScript",
+          "Vercel",
+          "Gemini API",
+          "ESP32",
+          "Web Serial"
         ]
       },
       {
@@ -495,6 +508,36 @@
     "proofs_label": "Proof",
     "proofs": [
       "AMIIA certificate of participation, issued in Rabat on 4 November 2026 (ref. AMIIA/AI-MEDX/2026/004)"
+    ]
+  },
+  "nasa": {
+    "id": "nasa",
+    "kicker": "International competition",
+    "org": "NASA Space Apps Challenge 2026",
+    "role": "Web developer, team Atlas Cosmos",
+    "place": "Casablanca",
+    "dates": "14 – 15 November 2026 · 48 h",
+    "title": "AeroFlame SI: detecting fire where smoke does not rise",
+    "text": "In microgravity, smoke does not rise towards the detector: it follows the cabin airflow. For the \"Flame in Freefall\" challenge, our team of five designed AeroFlame SI, a sensor that combines flame, smoke and heat, and a web platform that turns those readings into a risk level explained by AI from NASA research.",
+    "points": [
+      "<b>The team's idea:</b> an ESP32 node placed in the cabin airflow (infrared flame, MQ-2 smoke, BME280), a risk index adjusted to the habitat's oxygen level, and smoke without heat or flame treated as dust.",
+      "<b>My role:</b> designing and deploying the web platform (React, Vite, Vercel, 10 merged pull requests), integrating the Gemini API on the server side to explain each alert from the 27 NASA findings on screen, reading the real sensor in the browser (Web Serial), then producing the 30-second demo, the slide deck and the official submission.",
+      "<b>The results, in simulation:</b> in a simulated lunar base, an alert at 31 s against 41 s for a smoke detector alone, and no false alarm on a dust cloud. The sensor has not yet been tested with a real flame."
+    ],
+    "proofs_label": "Proof",
+    "proofs": [
+      "\"Galactic Problem Solver\" certificate, NASA Space Apps Challenge 2026",
+      "use of AI assistants declared in the submission"
+    ],
+    "links": [
+      {
+        "href": "https://aeroflame-si.vercel.app",
+        "label": "See the live demo"
+      },
+      {
+        "href": "https://github.com/HaithamSD01/AeroFlame-SI",
+        "label": "Source code on GitHub"
+      }
     ]
   }
 }

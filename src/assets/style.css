@@ -206,6 +206,7 @@ abbr{text-decoration:none}
 .program-kicker{display:inline-block;font-size:.8rem;font-weight:600;color:var(--gold-text);border:1px solid var(--ornament-soft);border-radius:999px;padding:.1rem .65rem;margin-block-end:.8rem}
 .program-proofs{margin-block-start:1.25rem;padding-block-start:1rem;border-block-start:1px solid var(--line);color:var(--muted);font-size:.92rem}
 .program-proofs b{color:var(--text);font-weight:600}
+.program-links{margin-block-start:.9rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font-weight:600;font-size:.95rem}
 .overlap{max-width:78ch;color:var(--muted);font-size:.97rem;padding:1.1rem 1.25rem;border:1px dashed var(--line-strong);border-radius:12px}
 .overlap b{color:var(--text)}
 .overlap{margin-block-end:1.75rem}

@@ -14,7 +14,7 @@
   "github": "https://github.com/HaithamSD01",
   "github_short": "github.com/HaithamSD01",
   "repo": "https://github.com/HaithamSD01/portfolio",
-  "date_modified": "2026-11-06",
+  "date_modified": "2026-11-21",
   "cv": {
     "fr": "/cv/Haitham_Dhaimi_CV_FR.pdf",
     "en": "/cv/Haitham_Dhaimi_CV_EN.pdf",
@@ -58,7 +58,10 @@
     "Cloud computing",
     "5G",
     "Traitement d'image médicale",
-    "Explicabilité de l'IA (XAI)"
+    "Explicabilité de l'IA (XAI)",
+    "IA générative appliquée (Gemini)",
+    "React",
+    "ESP32"
   ],
   "google_site_verification": "c2ZruzY6YrciRENj2S1ErYR78Nk-eEUd83EqWyfuOBw"
 }

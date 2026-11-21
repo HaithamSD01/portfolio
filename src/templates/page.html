@@ -1,4 +1,4 @@
-{% macro program_card(pg) %}
+{% macro program_card(pg, new_tab) %}
     <article class="case case-program" id="{{ pg.id }}" aria-labelledby="{{ pg.id }}-title">
       <p class="program-kicker">{{ pg.kicker }}</p>
       <div class="case-meta">
@@ -16,6 +16,7 @@
         </div>
       </div>
       <p class="program-proofs"><b>{{ pg.proofs_label }} :</b> {{ pg.proofs | join(' · ') }}</p>
+      {% if pg.links is defined %}<p class="program-links">{% for l in pg.links %}<a href="{{ l.href }}" rel="noopener" target="_blank">{{ l.label }}<span class="sr-only"> {{ new_tab }}</span></a>{% endfor %}</p>{% endif %}
     </article>
 {% endmacro -%}
 <!DOCTYPE html>
@@ -250,11 +251,13 @@
     </article>
     {% endfor %}
 
-    {{ program_card(c.program) }}
-
     <p class="overlap">{{ c.overlap | safe }}</p>
 
-    {{ program_card(c.event) }}
+    {{ program_card(c.nasa, c.ui.new_tab) }}
+
+    {{ program_card(c.program, c.ui.new_tab) }}
+
+    {{ program_card(c.event, c.ui.new_tab) }}
   </div>
 </section>
 
