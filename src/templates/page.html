@@ -327,6 +327,7 @@
         <li>
           <h3>{{ t.title }}</h3>
           <p><span>{{ t.org }}</span><span>{{ t.date }}</span></p>
+          {% if t.kind is defined %}<p class="cert-kind"><em>{{ t.kind }}</em></p>{% endif %}
           {% if t.exam is defined and t.exam %}<p class="exam-badge">{{ c.trainings.exam_note }}</p>{% endif %}
           {% if t.note is defined %}<p class="note-badge">{{ t.note }}</p>{% endif %}
         </li>

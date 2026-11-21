@@ -347,42 +347,71 @@
     ]
   },
   "trainings": {
-    "title": "Formations suivies",
-    "intro": "Des formations, pas des certifications : quand je passerai un examen officiel, il apparaîtra ici avec son lien de vérification.",
+    "title": "Certificats",
+    "intro": "Chaque certificat porte sa nature en italique : participation, cours ou formation. Quand je passerai un examen officiel (CompTIA, AWS, HCIA), la certification apparaîtra ici avec son lien de vérification.",
     "exam_note": "examen officiel non passé",
     "items": [
       {
-        "title": "Préparation CompTIA Security+ (SY0-701)",
+        "title": "Galactic Problem Solver",
+        "org": "NASA Space Apps Challenge",
+        "date": "novembre 2026",
+        "kind": "certificat de participation"
+      },
+      {
+        "title": "AI-MEDX 2026 Global Summit",
+        "org": "AI in Medicine with eXplainability, UM6P",
+        "date": "novembre 2026",
+        "kind": "certificat de participation · 18 h de formation continue (CPD)"
+      },
+      {
+        "title": "CompTIA Security+ (SY0-701)",
         "org": "Smartovate Ltd / Subul",
         "date": "août 2026",
+        "kind": "certificat de formation",
         "exam": true
       },
       {
-        "title": "Préparation AWS AI Practitioner (AIF-C01)",
+        "title": "AWS Certified AI Practitioner (AIF-C01)",
         "org": "Smartovate Ltd / Subul",
         "date": "août 2026",
+        "kind": "certificat de formation",
         "exam": true
+      },
+      {
+        "title": "AI Basic: Overview of AI",
+        "org": "Huawei ICT Academy",
+        "date": "janvier 2026",
+        "kind": "certificat de cours · examen du cours réussi, pas une certification HCIA"
       },
       {
         "title": "Digital Power",
         "org": "Huawei ICT Academy",
         "date": "octobre 2025",
-        "note": "examen du cours réussi · ce n'est pas une certification HCIA"
+        "kind": "certificat de cours · examen du cours réussi, pas une certification HCIA"
+      },
+      {
+        "title": "Seeds for the Future (Huawei Talent Development Flagship Project)",
+        "org": "Huawei",
+        "date": "août 2025",
+        "kind": "certificat de fin de programme"
+      },
+      {
+        "title": "AI for Beginners · Effective Presentations · Business Email",
+        "org": "HP LIFE / HP Foundation",
+        "date": "février – septembre 2025",
+        "kind": "certificats de cours en ligne"
       },
       {
         "title": "What Is Generative AI?",
         "org": "LinkedIn Learning",
-        "date": "juillet 2025"
-      },
-      {
-        "title": "AI for Beginners, Effective Presentations, Business Email",
-        "org": "HP LIFE / HP Foundation",
-        "date": "2025"
+        "date": "juillet 2025",
+        "kind": "certificat de cours en ligne"
       },
       {
         "title": "AI Basics: Overview of AI",
         "org": "Huawei Talent Online",
-        "date": "février 2024"
+        "date": "février 2024",
+        "kind": "certificat de cours en ligne · évaluation réussie"
       }
     ]
   },
