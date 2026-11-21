@@ -253,8 +253,6 @@
 
     <p class="overlap">{{ c.overlap | safe }}</p>
 
-    {{ program_card(c.nasa, c.ui.new_tab) }}
-
     {{ program_card(c.program, c.ui.new_tab) }}
 
     {{ program_card(c.event, c.ui.new_tab) }}
@@ -267,6 +265,7 @@
       <h2 id="proj-title">{{ c.projects.title }}</h2>
       <p>{{ c.projects.intro }}</p>
     </header>
+    {{ program_card(c.nasa, c.ui.new_tab) }}
     <ul class="card-grid">
       {% for p in c.projects['items'] %}
       <li class="card">
