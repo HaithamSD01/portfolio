@@ -35,7 +35,7 @@
     "copy_fail": "Couldn't copy, the address is shown next to it.",
     "suggest_dismiss": "Close",
     "details_more": "Read the full case study",
-    "updated": "Last updated: 21 November 2026",
+    "updated": "Last updated: 27 November 2026",
     "source": "Site source code",
     "back_top": "Back to top",
     "new_tab": "(opens in a new tab)",
@@ -359,63 +359,93 @@
         "title": "Galactic Problem Solver",
         "org": "NASA Space Apps Challenge",
         "date": "November 2026",
-        "kind": "certificate of participation"
+        "kind": "certificate of participation",
+        "logo": "nasa",
+        "logo_w": 305,
+        "logo_h": 120
       },
       {
         "title": "AI-MEDX 2026 Global Summit",
         "org": "AI in Medicine with eXplainability, UM6P",
         "date": "November 2026",
-        "kind": "certificate of participation · 18 CPD hours"
+        "kind": "certificate of participation · 18 CPD hours",
+        "logo": "aimedx",
+        "logo_w": 251,
+        "logo_h": 120
       },
       {
         "title": "CompTIA Security+ (SY0-701)",
         "org": "Smartovate Ltd / Subul",
         "date": "August 2026",
         "kind": "training certificate",
-        "exam": true
+        "exam": true,
+        "logo": "comptia",
+        "logo_w": 420,
+        "logo_h": 92
       },
       {
         "title": "AWS Certified AI Practitioner (AIF-C01)",
         "org": "Smartovate Ltd / Subul",
         "date": "August 2026",
         "kind": "training certificate",
-        "exam": true
+        "exam": true,
+        "logo": "aws",
+        "logo_w": 200,
+        "logo_h": 120
       },
       {
         "title": "AI Basic: Overview of AI",
         "org": "Huawei ICT Academy",
         "date": "January 2026",
-        "kind": "course certificate · course exam passed, not an HCIA certification"
+        "kind": "course certificate · course exam passed, not an HCIA certification",
+        "logo": "ictacademy",
+        "logo_w": 125,
+        "logo_h": 120
       },
       {
         "title": "Digital Power",
         "org": "Huawei ICT Academy",
         "date": "October 2025",
-        "kind": "course certificate · course exam passed, not an HCIA certification"
+        "kind": "course certificate · course exam passed, not an HCIA certification",
+        "logo": "ictacademy",
+        "logo_w": 125,
+        "logo_h": 120
       },
       {
         "title": "Seeds for the Future (Huawei Talent Development Flagship Project)",
         "org": "Huawei",
         "date": "August 2025",
-        "kind": "programme completion certificate"
+        "kind": "programme completion certificate",
+        "logo": "huawei",
+        "logo_w": 118,
+        "logo_h": 120
       },
       {
         "title": "AI for Beginners · Effective Presentations · Business Email",
         "org": "HP LIFE / HP Foundation",
         "date": "February – September 2025",
-        "kind": "online course certificates"
+        "kind": "online course certificates",
+        "logo": "hplife",
+        "logo_w": 238,
+        "logo_h": 120
       },
       {
         "title": "What Is Generative AI?",
         "org": "LinkedIn Learning",
         "date": "July 2025",
-        "kind": "online course certificate"
+        "kind": "online course certificate",
+        "logo": "linkedin",
+        "logo_w": 420,
+        "logo_h": 96
       },
       {
         "title": "AI Basics: Overview of AI",
         "org": "Huawei Talent Online",
         "date": "February 2024",
-        "kind": "online course certificate · assessment passed"
+        "kind": "online course certificate · assessment passed",
+        "logo": "huawei",
+        "logo_w": 118,
+        "logo_h": 120
       }
     ]
   },
@@ -653,6 +683,76 @@
         "h": 640,
         "pos": "mid",
         "caption": "At GITEX Africa, Morocco."
+      }
+    ]
+  },
+  "logos": {
+    "title": "Organisations along the way",
+    "intro": "Where I did my internships, joined programmes, learned and competed.",
+    "items": [
+      {
+        "logo": "smartovate",
+        "w": 348,
+        "h": 120,
+        "name": "Smartovate",
+        "role": "Generative-AI internship, 2026",
+        "href": "#smartovate"
+      },
+      {
+        "logo": "hikma",
+        "w": 420,
+        "h": 113,
+        "name": "Promopharm, Hikma group",
+        "role": "Quality-control internship, 2026",
+        "href": "#promopharm"
+      },
+      {
+        "logo": "huawei",
+        "w": 118,
+        "h": 120,
+        "name": "Huawei",
+        "role": "Seeds for the Future, China, 2025",
+        "href": "#huawei"
+      },
+      {
+        "logo": "nasa",
+        "w": 305,
+        "h": 120,
+        "name": "NASA Space Apps Challenge",
+        "role": "Competition, 2026",
+        "href": "#nasa"
+      },
+      {
+        "logo": "aimedx",
+        "w": 251,
+        "h": 120,
+        "name": "AI-MEDX 2026",
+        "role": "Summit, AMIIA delegate",
+        "href": "#aimedx"
+      },
+      {
+        "logo": "amiia",
+        "w": 210,
+        "h": 120,
+        "name": "AMIIA",
+        "role": "Active member since 2026",
+        "href": "#involvement"
+      },
+      {
+        "logo": "rally",
+        "w": 168,
+        "h": 120,
+        "name": "RallyIA Future Lab",
+        "role": "3rd prize, e-Government, 2026",
+        "href": "#projects"
+      },
+      {
+        "logo": "ictacademy",
+        "w": 125,
+        "h": 120,
+        "name": "Huawei ICT Academy",
+        "role": "Digital Power and AI Basic courses",
+        "href": "#background"
       }
     ]
   }

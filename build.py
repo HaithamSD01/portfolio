@@ -298,9 +298,10 @@ def build(make_og=False):
     ASSETS.mkdir(parents=True, exist_ok=True)
     for name in ("style.css", "main.js"):
         shutil.copyfile(SRC / "assets" / name, ASSETS / name)
-    (ASSETS / "img").mkdir(exist_ok=True)
-    for f in (SRC / "assets" / "img").glob("*.webp"):
-        shutil.copyfile(f, ASSETS / "img" / f.name)
+    for f in (SRC / "assets" / "img").rglob("*.webp"):
+        target = ASSETS / "img" / f.relative_to(SRC / "assets" / "img")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(f, target)
     write(ASSETS / "zellige.svg", zellige_svg())
     write(ASSETS / "rule.svg", rule_svg())
     write(ASSETS / "favicon.svg", favicon_svg())
