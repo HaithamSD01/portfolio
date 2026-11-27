@@ -115,13 +115,15 @@ def rule_svg():
 
 
 def favicon_svg():
+    """Logo HD dans l'étoile à huit branches, sur fond bleu nuit."""
     return (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
-        f'<rect width="64" height="64" rx="14" fill="{NAVY}"/>'
-        '<g fill="none" stroke-width="3.2" stroke-linejoin="round">'
-        '<rect x="18" y="18" width="28" height="28" stroke="#3CC9BB"/>'
-        '<rect x="18" y="18" width="28" height="28" stroke="#D4A017" transform="rotate(45 32 32)"/>'
-        "</g></svg>"
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">'
+        f'<rect width="100" height="100" rx="22" fill="{NAVY}"/>'
+        '<g fill="none" stroke="#3CC9BB" stroke-width="4" stroke-linejoin="round">'
+        '<rect x="22" y="22" width="56" height="56"/><rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)"/></g>'
+        '<g fill="none" stroke-width="7.5"><path d="M34 36V64M34 50H49M49 36V64" stroke="#F5F0E4"/>'
+        '<path d="M49 38.25h5.5a11.75 11.75 0 0 1 0 23.5H49" stroke="#D4A017"/></g>'
+        "</svg>"
     )
 
 
@@ -132,19 +134,28 @@ def raster_icons():
     def draw(size, rounded=True):
         scale = 8
         big = size * scale
+        u = big / 100
         img = Image.new("RGBA", (big, big), (0, 0, 0, 0))
         g = ImageDraw.Draw(img)
-        radius = int(big * 14 / 64) if rounded else 0
+        radius = int(big * 22 / 100) if rounded else 0
         g.rounded_rectangle([0, 0, big - 1, big - 1], radius=radius, fill=NAVY)
-        c = big / 2
-        half = big * 14 / 64
-        width = max(2, int(big * 3.2 / 64))
-        for rot, color in [(0, "#3CC9BB"), (45, "#D4A017")]:
+        c = 50 * u
+        half = 28 * u
+        for rot in (0, 45):
             pts = []
             for k in range(4):
                 a = math.radians(45 + 90 * k + rot)
                 pts.append((c + half * math.sqrt(2) * math.cos(a), c + half * math.sqrt(2) * math.sin(a)))
-            g.line(pts + [pts[0]], fill=color, width=width, joint="curve")
+            g.line(pts + [pts[0]], fill="#3CC9BB", width=max(2, int(4 * u)), joint="curve")
+        w = max(2, int(7.5 * u))
+        sand, gold = "#F5F0E4", "#D4A017"
+        g.line([(34 * u, 36 * u), (34 * u, 64 * u)], fill=sand, width=w)
+        g.line([(49 * u, 36 * u), (49 * u, 64 * u)], fill=sand, width=w)
+        g.line([(34 * u, 50 * u), (49 * u, 50 * u)], fill=sand, width=w)
+        r = 11.75 * u
+        g.line([(49 * u, 38.25 * u), (54.5 * u, 38.25 * u)], fill=gold, width=w)
+        g.line([(49 * u, 61.75 * u), (54.5 * u, 61.75 * u)], fill=gold, width=w)
+        g.arc([54.5 * u - r - w / 2, 50 * u - r - w / 2, 54.5 * u + r + w / 2, 50 * u + r + w / 2], -90, 90, fill=gold, width=w)
         return img.resize((size, size), Image.LANCZOS)
 
     draw(48).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
@@ -267,6 +278,9 @@ def headers(script_hash):
 /assets/main.js
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/img/*
+  Cache-Control: public, max-age=2592000
+
 /cv/*
   Cache-Control: public, max-age=3600
   X-Robots-Tag: noindex
@@ -284,6 +298,9 @@ def build(make_og=False):
     ASSETS.mkdir(parents=True, exist_ok=True)
     for name in ("style.css", "main.js"):
         shutil.copyfile(SRC / "assets" / name, ASSETS / name)
+    (ASSETS / "img").mkdir(exist_ok=True)
+    for f in (SRC / "assets" / "img").glob("*.webp"):
+        shutil.copyfile(f, ASSETS / "img" / f.name)
     write(ASSETS / "zellige.svg", zellige_svg())
     write(ASSETS / "rule.svg", rule_svg())
     write(ASSETS / "favicon.svg", favicon_svg())

@@ -53,7 +53,11 @@
   "hero": {
     "kicker": "AI, data & digital engineering",
     "lead": "I study digital engineering and artificial intelligence at <strong>SUPTECH-SANTÉ</strong> (Mohammedia, Morocco). This summer I shipped a <strong>generative-AI multi-agent system to production on Azure</strong>, and spent a month in a <strong>regulated environment</strong>, in pharmaceutical quality control. What I care about: building reliable digital tools that teams actually adopt, with healthcare as my field of choice.",
-    "availability": "Open to internships and projects in AI, data, cloud and software, in healthcare and beyond."
+    "availability": "Open to internships and projects in AI, data, cloud and software, in healthcare and beyond.",
+    "announce_tag": "New",
+    "announce": "Looking for a 2-month PFA internship, July – September 2027.",
+    "announce_cta": "Get in touch",
+    "photo_alt": "Portrait of Haitham Dhaimi"
   },
   "metrics": [
     {
@@ -476,18 +480,38 @@
         "title": "Data must be traceable",
         "text": "A lesson from the lab: a result is only worth something if you can find out who produced it, when, and with which instrument."
       }
-    ]
+    ],
+    "photo_alt": "Haitham Dhaimi in the Moroccan desert"
   },
   "contact": {
     "title": "Contact",
-    "text": "Email or LinkedIn is the easiest. I reply in English, French or Arabic.",
+    "text": "The easiest ways: the form below, email or LinkedIn. I reply in English, French or Arabic.",
     "email_label": "Email",
     "linkedin_label": "LinkedIn",
     "github_label": "GitHub",
     "location_label": "Based in",
     "location": "Casablanca, Morocco",
     "qr_label": "Scan to open this site",
-    "qr_alt": "QR code linking to Haitham Dhaimi's portfolio"
+    "qr_alt": "QR code linking to Haitham Dhaimi's portfolio",
+    "form": {
+      "title": "Send a message",
+      "name": "Name",
+      "email": "Email",
+      "org": "Organisation (optional)",
+      "subject": "Subject",
+      "options": [
+        "PFA internship 2027",
+        "Project or collaboration",
+        "Other"
+      ],
+      "message": "Message",
+      "privacy": "Your details are only used to reply to you.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "ok": "Thank you, your message has been sent. I'll get back to you as soon as I can.",
+      "error": "The message could not be sent. Please email me directly at the address above.",
+      "hp": "Leave this field empty"
+    }
   },
   "notfound": {
     "title": "Page not found",
@@ -566,6 +590,69 @@
       {
         "href": "https://github.com/HaithamSD01/AeroFlame-SI",
         "label": "Source code on GitHub"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "In pictures",
+    "intro": "A few moments from the programmes and competitions described above.",
+    "open": "enlarge the photo",
+    "items": [
+      {
+        "img": "medx-podium",
+        "w": 480,
+        "h": 640,
+        "pos": "top",
+        "caption": "AI-MEDX 2026 summit, UM6P Ben Guerir, November 2026."
+      },
+      {
+        "img": "medx-trophy",
+        "w": 640,
+        "h": 360,
+        "pos": "",
+        "caption": "AI-MEDX 2026: AMIIA delegate, with the event plaque bearing my name."
+      },
+      {
+        "img": "rallyia-trophy",
+        "w": 480,
+        "h": 640,
+        "pos": "top",
+        "caption": "RallyIA Future Lab, Merzouga, June 2026: Silver trophy (3rd prize), e-Government category, with my team."
+      },
+      {
+        "img": "rallyia-pitch",
+        "w": 480,
+        "h": 640,
+        "pos": "top",
+        "caption": "RallyIA Future Lab: pitching Chrik IA, a one-stop shop for entrepreneurs, to the jury."
+      },
+      {
+        "img": "seeds-group",
+        "w": 640,
+        "h": 427,
+        "pos": "",
+        "caption": "Huawei Seeds for the Future closing ceremony, Shenzhen, 22 August 2025: the Moroccan delegation."
+      },
+      {
+        "img": "seeds-ceremony",
+        "w": 640,
+        "h": 427,
+        "pos": "",
+        "caption": "Shenzhen, 22 August 2025: in traditional Moroccan dress at the closing ceremony."
+      },
+      {
+        "img": "seeds-session",
+        "w": 640,
+        "h": 427,
+        "pos": "",
+        "caption": "Seeds for the Future: speaking during a session."
+      },
+      {
+        "img": "gitex",
+        "w": 480,
+        "h": 640,
+        "pos": "mid",
+        "caption": "At GITEX Africa, Morocco."
       }
     ]
   }

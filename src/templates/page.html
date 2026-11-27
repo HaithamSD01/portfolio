@@ -67,7 +67,7 @@
 <header class="site-header" id="top">
   <div class="wrap header-row">
     <a class="brand" href="{{ c.path }}" aria-label="{{ site.name }}, {{ c.ui.home }}">
-      <svg class="brand-star" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></svg>
+      <svg class="brand-logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g class="bl-star"><rect x="20" y="20" width="60" height="60"/><rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)"/></g><path class="bl-h" d="M33 35V65M33 50H49M49 35V65"/><path class="bl-d" d="M49 37.75h6a12.25 12.25 0 0 1 0 24.5h-6"/></svg>
       <span>Haitham Dhaimi</span>
     </a>
 
@@ -124,6 +124,7 @@
   <div class="hero-pattern" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-text">
+      <p class="announce"><span class="announce-tag">{{ c.hero.announce_tag }}</span><span>{{ c.hero.announce }}</span><a href="#contact-form">{{ c.hero.announce_cta }}</a></p>
       <p class="hero-kicker">{{ c.hero.kicker }}</p>
       {% if c.hero.name_first is defined %}<h1 id="hero-name" class="hero-name"><span>{{ c.hero.name_first }}</span> <span class="hero-last">{{ c.hero.name_last }}</span></h1>
       <p class="hero-latin" lang="en" dir="ltr">{{ c.hero.name_latin }}</p>{% else %}<h1 id="hero-name" class="hero-name" lang="en"><span>Haitham</span> <span class="hero-last">Dhaimi</span></h1>{% endif %}
@@ -143,18 +144,19 @@
         <a href="{{ site.github }}" rel="me noopener" target="_blank">GitHub<span class="sr-only"> {{ c.ui.new_tab }}</span></a>
       </p>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 400 400" focusable="false">
-        <circle class="ring" cx="200" cy="200" r="182"/>
-        <circle class="ring ring-dash" cx="200" cy="200" r="168"/>
-        <rect class="sq sq-a" x="95" y="95" width="210" height="210"/>
-        <rect class="sq sq-b" x="95" y="95" width="210" height="210" transform="rotate(45 200 200)"/>
-        <rect class="sq sq-in" x="140" y="140" width="120" height="120" transform="rotate(22.5 200 200)"/>
-        <rect class="sq sq-in" x="140" y="140" width="120" height="120" transform="rotate(67.5 200 200)"/>
-        <circle class="core" cx="200" cy="200" r="78"/>
-        <path class="pulse" d="M126 200h34l11-28 15 60 15-92 15 108 12-48h46"/>
-        {% for p in star_points %}<circle class="node" cx="{{ p[0] }}" cy="{{ p[1] }}" r="4.5"/>{% endfor %}
+    <figure class="hero-photo">
+      <svg viewBox="0 -24 400 524" role="img" aria-labelledby="hero-photo-title" focusable="false">
+        <title id="hero-photo-title">{{ c.hero.photo_alt }}</title>
+        <defs><clipPath id="arch-clip"><path d="M45 500V271A175 175 0 1 1 355 271V500Z"/></clipPath></defs>
+        <g clip-path="url(#arch-clip)">
+          <rect class="arch-bg" x="0" y="0" width="400" height="500"/>
+          <circle class="arch-glow" cx="200" cy="215" r="150"/>
+          <image href="/assets/img/portrait-800.webp" x="0" y="33.5" width="400" height="466.5" preserveAspectRatio="xMidYMid slice"/>
+        </g>
+        <path class="arch-line" d="M30 500V275A190 190 0 1 1 370 275V500"/>
+        <g class="arch-star" transform="translate(200 0)"><rect x="-9" y="-9" width="18" height="18"/><rect x="-9" y="-9" width="18" height="18" transform="rotate(45)"/></g>
       </svg>
+    </figure>
     </div>
   </div>
 </section>
@@ -354,7 +356,23 @@
   </div>
 </section>
 
-<section class="section section-alt" id="about" aria-labelledby="about-title">
+<section class="section section-alt" id="gallery" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="gallery-title">{{ c.gallery.title }}</h2>
+      <p>{{ c.gallery.intro }}</p>
+    </header>
+    <ul class="gallery">
+      {% for g in c.gallery['items'] %}<li><figure>
+        <a href="/assets/img/{{ g.img }}-1600.webp" target="_blank" rel="noopener"><img src="/assets/img/{{ g.img }}-640.webp" width="{{ g.w }}" height="{{ g.h }}" alt="{{ g.caption }}" loading="lazy" decoding="async"{% if g.pos %} class="pos-{{ g.pos }}"{% endif %}><span class="sr-only"> ({{ c.gallery.open }}, {{ c.ui.new_tab }})</span></a>
+        <figcaption>{{ g.caption }}</figcaption>
+      </figure></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
   <div class="wrap about-grid">
     <div>
       <header class="section-head">
@@ -362,6 +380,7 @@
       </header>
       {% for p in c.about.paras %}<p class="about-p">{{ p }}</p>
       {% endfor %}
+      <figure class="about-photo"><img src="/assets/img/desert-640.webp" width="480" height="640" alt="{{ c.about.photo_alt }}" loading="lazy" decoding="async"></figure>
     </div>
     <div class="principles">
       <h3>{{ c.about.principles_title }}</h3>
@@ -373,7 +392,7 @@
   </div>
 </section>
 
-<section class="section" id="contact" aria-labelledby="contact-title">
+<section class="section section-alt" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact-grid">
     <div>
       <header class="section-head">
@@ -392,6 +411,19 @@
       <img src="/assets/qr.svg" width="148" height="148" alt="{{ c.contact.qr_alt }}">
       <figcaption>{{ c.contact.qr_label }}<br><span dir="ltr">{{ site.base_url | replace('https://','') }}</span></figcaption>
     </figure>
+    <form class="contact-form" id="contact-form" name="contact" method="POST" action="{{ c.path }}" data-netlify="true" netlify-honeypot="bot-field" data-sending="{{ c.contact.form.sending }}" data-ok="{{ c.contact.form.ok }}" data-error="{{ c.contact.form.error }}">
+      <h3 class="form-title">{{ c.contact.form.title }}</h3>
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="page" value="{{ c.lang }}">
+      <p class="hp"><label>{{ c.contact.form.hp }} <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <p class="field"><label for="f-name">{{ c.contact.form.name }}</label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120"></p>
+      <p class="field"><label for="f-email">{{ c.contact.form.email }}</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" dir="ltr"></p>
+      <p class="field"><label for="f-org">{{ c.contact.form.org }}</label><input id="f-org" name="organisation" type="text" autocomplete="organization" maxlength="160"></p>
+      <p class="field"><label for="f-subject">{{ c.contact.form.subject }}</label><select id="f-subject" name="subject">{% for o in c.contact.form.options %}<option>{{ o }}</option>{% endfor %}</select></p>
+      <p class="field field-full"><label for="f-message">{{ c.contact.form.message }}</label><textarea id="f-message" name="message" required maxlength="4000" rows="6"></textarea></p>
+      <p class="form-foot field-full"><button class="btn btn-primary" type="submit">{{ c.contact.form.submit }}</button><span class="form-privacy">{{ c.contact.form.privacy }}</span></p>
+      <p class="form-status field-full" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -399,7 +431,7 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <svg class="footer-star" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></svg>
+    <svg class="brand-logo footer-logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g class="bl-star"><rect x="20" y="20" width="60" height="60"/><rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)"/></g><path class="bl-h" d="M33 35V65M33 50H49M49 35V65"/><path class="bl-d" d="M49 37.75h6a12.25 12.25 0 0 1 0 24.5h-6"/></svg>
     <p>© 2026 Haitham Dhaimi. {{ c.ui.updated }}.</p>
     <p><a href="{{ site.repo }}" rel="noopener" target="_blank">{{ c.ui.source }}<span class="sr-only"> {{ c.ui.new_tab }}</span></a> <a href="#top">{{ c.ui.back_top }}</a></p>
   </div>

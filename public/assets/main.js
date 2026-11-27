@@ -146,4 +146,28 @@
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(function (s) { observer.observe(s); });
   }
+  /* ---------- Formulaire de contact (Netlify Forms) ---------- */
+  var form = document.getElementById('contact-form');
+  if (form && window.fetch && window.FormData && window.URLSearchParams) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var status = form.querySelector('.form-status');
+      var button = form.querySelector('button[type="submit"]');
+      status.classList.remove('is-error');
+      status.textContent = form.getAttribute('data-sending');
+      button.disabled = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error(String(res.status));
+        status.textContent = form.getAttribute('data-ok');
+        form.reset();
+      }).catch(function () {
+        status.classList.add('is-error');
+        status.textContent = form.getAttribute('data-error');
+      }).then(function () { button.disabled = false; });
+    });
+  }
 })();

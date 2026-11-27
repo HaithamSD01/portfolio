@@ -53,7 +53,11 @@
   "hero": {
     "kicker": "IA, data & ingénierie digitale",
     "lead": "J'étudie l'ingénierie digitale et l'intelligence artificielle à <strong>SUPTECH-SANTÉ</strong> (Mohammedia). Cet été, j'ai mis en production un <strong>système multi-agents d'IA générative sur Azure</strong>, et j'ai travaillé un mois dans un <strong>environnement réglementé</strong>, en contrôle qualité pharmaceutique. Ce qui m'intéresse : construire des outils numériques fiables, que des équipes adoptent vraiment, avec la santé comme domaine de prédilection.",
-    "availability": "Ouvert aux stages et aux projets en IA, data, cloud et développement, dans la santé comme dans d'autres secteurs."
+    "availability": "Ouvert aux stages et aux projets en IA, data, cloud et développement, dans la santé comme dans d'autres secteurs.",
+    "announce_tag": "Nouveau",
+    "announce": "Stage PFA recherché : 2 mois, juillet – septembre 2027.",
+    "announce_cta": "Me contacter",
+    "photo_alt": "Portrait de Haitham Dhaimi"
   },
   "metrics": [
     {
@@ -476,18 +480,38 @@
         "title": "Une donnée doit pouvoir se reconstituer",
         "text": "Leçon du laboratoire : un résultat ne vaut que si on peut retrouver qui l'a produit, quand et avec quel instrument."
       }
-    ]
+    ],
+    "photo_alt": "Haitham Dhaimi dans le désert marocain"
   },
   "contact": {
     "title": "Contact",
-    "text": "Le plus simple, c'est l'e-mail ou LinkedIn. Je réponds en français, en anglais ou en arabe.",
+    "text": "Le plus simple : le formulaire ci-dessous, l'e-mail ou LinkedIn. Je réponds en français, en anglais ou en arabe.",
     "email_label": "E-mail",
     "linkedin_label": "LinkedIn",
     "github_label": "GitHub",
     "location_label": "Basé à",
     "location": "Casablanca, Maroc",
     "qr_label": "Scanner pour ouvrir ce site",
-    "qr_alt": "QR code vers le portfolio de Haitham Dhaimi"
+    "qr_alt": "QR code vers le portfolio de Haitham Dhaimi",
+    "form": {
+      "title": "Écrire un message",
+      "name": "Nom",
+      "email": "E-mail",
+      "org": "Organisation (facultatif)",
+      "subject": "Objet",
+      "options": [
+        "Stage PFA 2027",
+        "Projet ou collaboration",
+        "Autre"
+      ],
+      "message": "Message",
+      "privacy": "Vos informations servent uniquement à vous répondre.",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "ok": "Merci, votre message est bien parti. Je vous réponds dès que possible.",
+      "error": "L'envoi n'a pas abouti. Écrivez-moi directement à l'adresse e-mail ci-dessus.",
+      "hp": "Ne pas remplir ce champ"
+    }
   },
   "notfound": {
     "title": "Page introuvable",
@@ -566,6 +590,69 @@
       {
         "href": "https://github.com/HaithamSD01/AeroFlame-SI",
         "label": "Code source sur GitHub"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "En images",
+    "intro": "Quelques moments des programmes et compétitions présentés plus haut.",
+    "open": "agrandir la photo",
+    "items": [
+      {
+        "img": "medx-podium",
+        "w": 480,
+        "h": 640,
+        "pos": "top",
+        "caption": "Sommet AI-MEDX 2026, UM6P Ben Guérir, novembre 2026."
+      },
+      {
+        "img": "medx-trophy",
+        "w": 640,
+        "h": 360,
+        "pos": "",
+        "caption": "AI-MEDX 2026 : délégué de l'AMIIA, avec la plaque de l'événement à mon nom."
+      },
+      {
+        "img": "rallyia-trophy",
+        "w": 480,
+        "h": 640,
+        "pos": "top",
+        "caption": "RallyIA Future Lab, Merzouga, juin 2026 : trophée Silver (3e prix), catégorie e-Gouvernement, avec mon équipe."
+      },
+      {
+        "img": "rallyia-pitch",
+        "w": 480,
+        "h": 640,
+        "pos": "top",
+        "caption": "RallyIA Future Lab : pitch de Chrik IA, guichet unique de l'entrepreneuriat, devant le jury."
+      },
+      {
+        "img": "seeds-group",
+        "w": 640,
+        "h": 427,
+        "pos": "",
+        "caption": "Huawei Seeds for the Future, cérémonie de clôture, Shenzhen, 22 août 2025 : la délégation marocaine."
+      },
+      {
+        "img": "seeds-ceremony",
+        "w": 640,
+        "h": 427,
+        "pos": "",
+        "caption": "Shenzhen, 22 août 2025 : en tenue traditionnelle marocaine à la cérémonie de clôture."
+      },
+      {
+        "img": "seeds-session",
+        "w": 640,
+        "h": 427,
+        "pos": "",
+        "caption": "Seeds for the Future : prise de parole pendant une session."
+      },
+      {
+        "img": "gitex",
+        "w": 480,
+        "h": 640,
+        "pos": "mid",
+        "caption": "Au GITEX Africa, au Maroc."
       }
     ]
   }

@@ -36,12 +36,10 @@ h1 span{{color:#7F5905}}
   <p class="title">{title}</p>
   <p class="url">{url}</p>
 </div>
-<svg class="star" viewBox="0 0 400 400">
-  <circle cx="200" cy="200" r="182" fill="none" stroke="rgba(179,130,15,.35)"/>
-  <rect x="95" y="95" width="210" height="210" fill="none" stroke="#0A6B64" stroke-width="3"/>
-  <rect x="95" y="95" width="210" height="210" fill="none" stroke="#B3820F" stroke-width="3" transform="rotate(45 200 200)"/>
-  <circle cx="200" cy="200" r="78" fill="#FFFCF5" stroke="rgba(179,130,15,.35)"/>
-  <path d="M126 200h34l11-28 15 60 15-92 15 108 12-48h46" fill="none" stroke="#0A6B64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg class="star" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(179,130,15,.35)" stroke-width=".6"/>
+  <g fill="none" stroke="#0A6B64" stroke-width="2.4" stroke-linejoin="round"><rect x="20" y="20" width="60" height="60"/><rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)"/></g>
+  <g fill="none" stroke-width="5.5"><path d="M33 35V65M33 50H49M49 35V65" stroke="#13203A"/><path d="M49 37.75h6a12.25 12.25 0 0 1 0 24.5h-6" stroke="#B3820F"/></g>
 </svg>
 </body></html>"""
 

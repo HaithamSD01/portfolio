@@ -15,6 +15,9 @@
 /assets/main.js
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/img/*
+  Cache-Control: public, max-age=2592000
+
 /cv/*
   Cache-Control: public, max-age=3600
   X-Robots-Tag: noindex
