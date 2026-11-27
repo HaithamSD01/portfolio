@@ -692,7 +692,7 @@
     "items": [
       {
         "logo": "smartovate",
-        "w": 348,
+        "w": 294,
         "h": 120,
         "name": "Smartovate",
         "role": "Generative-AI internship, 2026",
@@ -701,7 +701,7 @@
       {
         "logo": "hikma",
         "w": 420,
-        "h": 113,
+        "h": 114,
         "name": "Promopharm, Hikma group",
         "role": "Quality-control internship, 2026",
         "href": "#promopharm"
@@ -752,6 +752,22 @@
         "h": 120,
         "name": "Huawei ICT Academy",
         "role": "Digital Power and AI Basic courses",
+        "href": "#background"
+      },
+      {
+        "logo": "suptech",
+        "w": 420,
+        "h": 100,
+        "name": "SUPTECH SANTÉ",
+        "role": "Engineering degree, 2025 – 2028",
+        "href": "#background"
+      },
+      {
+        "logo": "uib",
+        "w": 420,
+        "h": 86,
+        "name": "Université Internationale Bleue",
+        "role": "Parent university",
         "href": "#background"
       }
     ]

@@ -690,7 +690,7 @@
     "items": [
       {
         "logo": "smartovate",
-        "w": 348,
+        "w": 294,
         "h": 120,
         "name": "Smartovate",
         "role": "تدريب في الذكاء الاصطناعي التوليدي، 2026",
@@ -699,7 +699,7 @@
       {
         "logo": "hikma",
         "w": 420,
-        "h": 113,
+        "h": 114,
         "name": "Promopharm، مجموعة Hikma",
         "role": "تدريب في مراقبة الجودة، 2026",
         "href": "#promopharm"
@@ -750,6 +750,22 @@
         "h": 120,
         "name": "Huawei ICT Academy",
         "role": "دورتا Digital Power وAI Basic",
+        "href": "#background"
+      },
+      {
+        "logo": "suptech",
+        "w": 420,
+        "h": 100,
+        "name": "SUPTECH SANTÉ",
+        "role": "سلك المهندسين، 2025 – 2028",
+        "href": "#background"
+      },
+      {
+        "logo": "uib",
+        "w": 420,
+        "h": 86,
+        "name": "الجامعة الدولية الزرقاء",
+        "role": "الجامعة الأم",
         "href": "#background"
       }
     ]
